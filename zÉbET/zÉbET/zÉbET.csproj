@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1D17D36F-4DC3-460F-875D-E60E50D7DCFC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>zÉbET</RootNamespace>
+    <AssemblyName>zÉbET</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\baseball.aspx" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\Basket.aspx" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\futbol.aspx" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\HoqueinoGelo.aspx" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\snooker.aspx" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\tennis.aspx" />
+    <Content Include="ZEBET_verFinal\Main\index.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="ZEBET_verFinal\fut\assets\css\cssFutebol.css" />
+    <Content Include="ZEBET_verFinal\fut\assets\css\fontawesome-all.min.css" />
+    <Content Include="ZEBET_verFinal\fut\assets\css\images\ie\grad0-15.svg" />
+    <Content Include="ZEBET_verFinal\fut\assets\css\images\overlay.png" />
+    <Content Include="ZEBET_verFinal\fut\assets\css\main.css" />
+    <Content Include="ZEBET_verFinal\fut\assets\js\breakpoints.min.js" />
+    <Content Include="ZEBET_verFinal\fut\assets\js\browser.min.js" />
+    <Content Include="ZEBET_verFinal\fut\assets\js\jquery.min.js" />
+    <Content Include="ZEBET_verFinal\fut\assets\js\jquery.scrollex.min.js" />
+    <Content Include="ZEBET_verFinal\fut\assets\js\jquery.scrolly.min.js" />
+    <Content Include="ZEBET_verFinal\fut\assets\js\main.js" />
+    <Content Include="ZEBET_verFinal\fut\assets\js\util.js" />
+    <Content Include="ZEBET_verFinal\fut\assets\webfonts\fa-brands-400.svg" />
+    <Content Include="ZEBET_verFinal\fut\assets\webfonts\fa-regular-400.svg" />
+    <Content Include="ZEBET_verFinal\fut\assets\webfonts\fa-solid-900.svg" />
+    <Content Include="ZEBET_verFinal\fut\images\19mai2016---cavalo-de-corrida-treina-na-pista-de-pimilco-em-baltimore-1463674877697_615x300.png" />
+    <Content Include="ZEBET_verFinal\fut\images\Aposta_esportiva_um_novo_jeito_de_ganhar_dinheiro-1.png" />
+    <Content Include="ZEBET_verFinal\fut\images\appinventor.ai_robson_ppena.CARTOLA.png" />
+    <Content Include="ZEBET_verFinal\fut\images\avatar.jpg" />
+    <Content Include="ZEBET_verFinal\fut\images\banner.jpg" />
+    <Content Include="ZEBET_verFinal\fut\images\england.png" />
+    <Content Include="ZEBET_verFinal\fut\images\France.png" />
+    <Content Include="ZEBET_verFinal\fut\images\pic02.jpg" />
+    <Content Include="ZEBET_verFinal\fut\images\pic03.jpg" />
+    <Content Include="ZEBET_verFinal\fut\images\pic04.jpg" />
+    <Content Include="ZEBET_verFinal\fut\images\pic05.jpg" />
+    <Content Include="ZEBET_verFinal\fut\images\pic06.jpg" />
+    <Content Include="ZEBET_verFinal\fut\images\pic07.jpg" />
+    <Content Include="ZEBET_verFinal\fut\images\pic08.jpg" />
+    <Content Include="ZEBET_verFinal\fut\images\Portugalicon.png" />
+    <Content Include="ZEBET_verFinal\fut\images\sites-apostas-esportivas-e1488209174545.png" />
+    <Content Include="ZEBET_verFinal\fut\images\tennis.jpeg" />
+    <Content Include="ZEBET_verFinal\fut\images\unnamed.png" />
+    <Content Include="ZEBET_verFinal\fut\images\wallpaperfut.png" />
+    <Content Include="ZEBET_verFinal\Main\19mai2016---cavalo-de-corrida-treina-na-pista-de-pimilco-em-baltimore-1463674877697_615x300.png" />
+    <Content Include="ZEBET_verFinal\Main\Aposta_esportiva_um_novo_jeito_de_ganhar_dinheiro-1.png" />
+    <Content Include="ZEBET_verFinal\Main\appinventor.ai_robson_ppena.CARTOLA.png" />
+    <Content Include="ZEBET_verFinal\Main\assets\css\fontawesome-all.min.css" />
+    <Content Include="ZEBET_verFinal\Main\assets\css\images\ie\grad0-15.svg" />
+    <Content Include="ZEBET_verFinal\Main\assets\css\images\overlay.png" />
+    <Content Include="ZEBET_verFinal\Main\assets\css\main.css" />
+    <Content Include="ZEBET_verFinal\Main\assets\js\breakpoints.min.js" />
+    <Content Include="ZEBET_verFinal\Main\assets\js\browser.min.js" />
+    <Content Include="ZEBET_verFinal\Main\assets\js\jquery.min.js" />
+    <Content Include="ZEBET_verFinal\Main\assets\js\jquery.scrollex.min.js" />
+    <Content Include="ZEBET_verFinal\Main\assets\js\jquery.scrolly.min.js" />
+    <Content Include="ZEBET_verFinal\Main\assets\js\main.js" />
+    <Content Include="ZEBET_verFinal\Main\assets\js\util.js" />
+    <Content Include="ZEBET_verFinal\Main\assets\webfonts\fa-brands-400.svg" />
+    <Content Include="ZEBET_verFinal\Main\assets\webfonts\fa-regular-400.svg" />
+    <Content Include="ZEBET_verFinal\Main\assets\webfonts\fa-solid-900.svg" />
+    <Content Include="ZEBET_verFinal\Main\avatar.jpg" />
+    <Content Include="ZEBET_verFinal\Main\banner.jpg" />
+    <Content Include="ZEBET_verFinal\Main\baseball.jpg" />
+    <Content Include="ZEBET_verFinal\Main\basketball.jpg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\css\baseball.jpg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\css\basketball.jpg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\css\basquet.css" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\css\cssFutebol.css" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\css\fontawesome-all.min.css" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\css\hoquei.css" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\css\hoquei.jpg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\css\images\ie\grad0-15.svg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\css\images\overlay.png" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\css\main.css" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\css\snooker.css" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\css\snooker.jpg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\css\tennis.jpeg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\css\Ténis.css" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\css\wallpaperfut.png" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\js\breakpoints.min.js" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\js\browser.min.js" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\js\jquery.min.js" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\js\jquery.scrollex.min.js" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\js\jquery.scrolly.min.js" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\js\main.js" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\js\util.js" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\webfonts\fa-brands-400.svg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\webfonts\fa-regular-400.svg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\webfonts\fa-solid-900.svg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\19mai2016---cavalo-de-corrida-treina-na-pista-de-pimilco-em-baltimore-1463674877697_615x300.png" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\Aposta_esportiva_um_novo_jeito_de_ganhar_dinheiro-1.png" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\appinventor.ai_robson_ppena.CARTOLA.png" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\avatar.jpg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\banner.jpg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\baseball.jpg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\basketball.jpg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\england.png" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\France.png" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\hoquei.jpg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\pic02.jpg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\pic03.jpg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\pic04.jpg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\pic05.jpg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\pic06.jpg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\pic07.jpg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\pic08.jpg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\Portugalicon.png" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\sites-apostas-esportivas-e1488209174545.png" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\snooker.jpg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\tennis.jpeg" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\unnamed.png" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\images\wallpaperfut.png" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\LICENSE.txt" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\README.txt" />
+    <Content Include="ZEBET_verFinal\Main\england.png" />
+    <Content Include="ZEBET_verFinal\Main\France.png" />
+    <Content Include="ZEBET_verFinal\Main\hoquei.jpg" />
+    <Content Include="ZEBET_verFinal\Main\images\19mai2016---cavalo-de-corrida-treina-na-pista-de-pimilco-em-baltimore-1463674877697_615x300.png" />
+    <Content Include="ZEBET_verFinal\Main\images\appinventor.ai_robson_ppena.CARTOLA.png" />
+    <Content Include="ZEBET_verFinal\Main\images\avatar.jpg" />
+    <Content Include="ZEBET_verFinal\Main\images\banner.jpg" />
+    <Content Include="ZEBET_verFinal\Main\images\pic02.jpg" />
+    <Content Include="ZEBET_verFinal\Main\images\pic03.jpg" />
+    <Content Include="ZEBET_verFinal\Main\images\pic04.jpg" />
+    <Content Include="ZEBET_verFinal\Main\images\pic05.jpg" />
+    <Content Include="ZEBET_verFinal\Main\images\pic06.jpg" />
+    <Content Include="ZEBET_verFinal\Main\images\pic07.jpg" />
+    <Content Include="ZEBET_verFinal\Main\images\pic08.jpg" />
+    <Content Include="ZEBET_verFinal\Main\images\sites-apostas-esportivas-e1488209174545.jpg" />
+    <Content Include="ZEBET_verFinal\Main\images\unnamed.png" />
+    <Content Include="ZEBET_verFinal\Main\LICENSE.txt" />
+    <Content Include="ZEBET_verFinal\Main\pic02.jpg" />
+    <Content Include="ZEBET_verFinal\Main\pic03.jpg" />
+    <Content Include="ZEBET_verFinal\Main\pic04.jpg" />
+    <Content Include="ZEBET_verFinal\Main\pic05.jpg" />
+    <Content Include="ZEBET_verFinal\Main\pic06.jpg" />
+    <Content Include="ZEBET_verFinal\Main\pic07.jpg" />
+    <Content Include="ZEBET_verFinal\Main\pic08.jpg" />
+    <Content Include="ZEBET_verFinal\Main\Portugalicon.png" />
+    <Content Include="ZEBET_verFinal\Main\README.txt" />
+    <Content Include="ZEBET_verFinal\Main\sites-apostas-esportivas-e1488209174545.png" />
+    <Content Include="ZEBET_verFinal\Main\snooker.jpg" />
+    <Content Include="ZEBET_verFinal\Main\tennis.jpeg" />
+    <Content Include="ZEBET_verFinal\Main\unnamed.png" />
+    <Content Include="ZEBET_verFinal\Main\wallpaperfut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ZEBET_verFinal\Main\DESPORTOS\baseball.aspx.cs">
+      <DependentUpon>baseball.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZEBET_verFinal\Main\DESPORTOS\baseball.aspx.designer.cs">
+      <DependentUpon>baseball.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZEBET_verFinal\Main\DESPORTOS\Basket.aspx.cs">
+      <DependentUpon>Basket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZEBET_verFinal\Main\DESPORTOS\Basket.aspx.designer.cs">
+      <DependentUpon>Basket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZEBET_verFinal\Main\DESPORTOS\futbol.aspx.cs">
+      <DependentUpon>futbol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZEBET_verFinal\Main\DESPORTOS\futbol.aspx.designer.cs">
+      <DependentUpon>futbol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZEBET_verFinal\Main\DESPORTOS\HoqueinoGelo.aspx.cs">
+      <DependentUpon>HoqueinoGelo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZEBET_verFinal\Main\DESPORTOS\HoqueinoGelo.aspx.designer.cs">
+      <DependentUpon>HoqueinoGelo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZEBET_verFinal\Main\DESPORTOS\snooker.aspx.cs">
+      <DependentUpon>snooker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZEBET_verFinal\Main\DESPORTOS\snooker.aspx.designer.cs">
+      <DependentUpon>snooker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZEBET_verFinal\Main\DESPORTOS\tennis.aspx.cs">
+      <DependentUpon>tennis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZEBET_verFinal\Main\DESPORTOS\tennis.aspx.designer.cs">
+      <DependentUpon>tennis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZEBET_verFinal\Main\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZEBET_verFinal\Main\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="ZEBET_verFinal\fut\assets\sass\libs\_breakpoints.scss" />
+    <Content Include="ZEBET_verFinal\fut\assets\sass\libs\_functions.scss" />
+    <Content Include="ZEBET_verFinal\fut\assets\sass\libs\_html-grid.scss" />
+    <Content Include="ZEBET_verFinal\fut\assets\sass\libs\_mixins.scss" />
+    <Content Include="ZEBET_verFinal\fut\assets\sass\libs\_vars.scss" />
+    <Content Include="ZEBET_verFinal\fut\assets\sass\libs\_vendor.scss" />
+    <Content Include="ZEBET_verFinal\fut\assets\sass\main.scss" />
+    <Content Include="ZEBET_verFinal\fut\assets\webfonts\fa-brands-400.eot" />
+    <Content Include="ZEBET_verFinal\fut\assets\webfonts\fa-brands-400.ttf" />
+    <Content Include="ZEBET_verFinal\fut\assets\webfonts\fa-brands-400.woff" />
+    <Content Include="ZEBET_verFinal\fut\assets\webfonts\fa-brands-400.woff2" />
+    <Content Include="ZEBET_verFinal\fut\assets\webfonts\fa-regular-400.eot" />
+    <Content Include="ZEBET_verFinal\fut\assets\webfonts\fa-regular-400.ttf" />
+    <Content Include="ZEBET_verFinal\fut\assets\webfonts\fa-regular-400.woff" />
+    <Content Include="ZEBET_verFinal\fut\assets\webfonts\fa-regular-400.woff2" />
+    <Content Include="ZEBET_verFinal\fut\assets\webfonts\fa-solid-900.eot" />
+    <Content Include="ZEBET_verFinal\fut\assets\webfonts\fa-solid-900.ttf" />
+    <Content Include="ZEBET_verFinal\fut\assets\webfonts\fa-solid-900.woff" />
+    <Content Include="ZEBET_verFinal\fut\assets\webfonts\fa-solid-900.woff2" />
+    <Content Include="ZEBET_verFinal\fut\Web.config" />
+    <Content Include="ZEBET_verFinal\Main\assets\sass\libs\_breakpoints.scss" />
+    <Content Include="ZEBET_verFinal\Main\assets\sass\libs\_functions.scss" />
+    <Content Include="ZEBET_verFinal\Main\assets\sass\libs\_html-grid.scss" />
+    <Content Include="ZEBET_verFinal\Main\assets\sass\libs\_mixins.scss" />
+    <Content Include="ZEBET_verFinal\Main\assets\sass\libs\_vars.scss" />
+    <Content Include="ZEBET_verFinal\Main\assets\sass\libs\_vendor.scss" />
+    <Content Include="ZEBET_verFinal\Main\assets\sass\main.scss" />
+    <Content Include="ZEBET_verFinal\Main\assets\webfonts\fa-brands-400.eot" />
+    <Content Include="ZEBET_verFinal\Main\assets\webfonts\fa-brands-400.ttf" />
+    <Content Include="ZEBET_verFinal\Main\assets\webfonts\fa-brands-400.woff" />
+    <Content Include="ZEBET_verFinal\Main\assets\webfonts\fa-brands-400.woff2" />
+    <Content Include="ZEBET_verFinal\Main\assets\webfonts\fa-regular-400.eot" />
+    <Content Include="ZEBET_verFinal\Main\assets\webfonts\fa-regular-400.ttf" />
+    <Content Include="ZEBET_verFinal\Main\assets\webfonts\fa-regular-400.woff" />
+    <Content Include="ZEBET_verFinal\Main\assets\webfonts\fa-regular-400.woff2" />
+    <Content Include="ZEBET_verFinal\Main\assets\webfonts\fa-solid-900.eot" />
+    <Content Include="ZEBET_verFinal\Main\assets\webfonts\fa-solid-900.ttf" />
+    <Content Include="ZEBET_verFinal\Main\assets\webfonts\fa-solid-900.woff" />
+    <Content Include="ZEBET_verFinal\Main\assets\webfonts\fa-solid-900.woff2" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\sass\libs\_breakpoints.scss" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\sass\libs\_functions.scss" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\sass\libs\_html-grid.scss" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\sass\libs\_mixins.scss" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\sass\libs\_vars.scss" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\sass\libs\_vendor.scss" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\sass\main.scss" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\webfonts\fa-brands-400.eot" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\webfonts\fa-brands-400.ttf" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\webfonts\fa-brands-400.woff" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\webfonts\fa-brands-400.woff2" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\webfonts\fa-regular-400.eot" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\webfonts\fa-regular-400.ttf" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\webfonts\fa-regular-400.woff" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\webfonts\fa-regular-400.woff2" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\webfonts\fa-solid-900.eot" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\webfonts\fa-solid-900.ttf" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\webfonts\fa-solid-900.woff" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\assets\webfonts\fa-solid-900.woff2" />
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\Web.config" />
+    <Content Include="ZEBET_verFinal\Main\Web.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49551/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

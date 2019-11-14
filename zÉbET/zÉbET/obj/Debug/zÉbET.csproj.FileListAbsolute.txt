@@ -1,0 +1,5 @@
+c:\users\i170015\documents\visual studio 2012\Projects\zÉbET\zÉbET\bin\zÉbET.dll
+c:\users\i170015\documents\visual studio 2012\Projects\zÉbET\zÉbET\bin\zÉbET.pdb
+c:\users\i170015\documents\visual studio 2012\Projects\zÉbET\zÉbET\obj\Debug\zÉbET.csprojResolveAssemblyReference.cache
+c:\users\i170015\documents\visual studio 2012\Projects\zÉbET\zÉbET\obj\Debug\zÉbET.dll
+c:\users\i170015\documents\visual studio 2012\Projects\zÉbET\zÉbET\obj\Debug\zÉbET.pdb
