@@ -104,7 +104,8 @@ body {
         -webkit-transition: none !important;
         -ms-transition: none !important;
         transition: none !important;
-    }
+    width: 302px;
+}
 
 input, textarea, select {
     font-family: 'Source Sans Pro', sans-serif;
@@ -1996,25 +1997,32 @@ input[type="submit"],
 input[type="reset"],
 button,
 .button {
+    border-style: none;
+    border-color: inherit;
+    border-width: 0;
     position: absolute;
-    margin-left: 480px;
-    margin-top: 25px;
     display: inline-block;
     border-radius: 0.25em;
     color: #fff !important;
     text-decoration: none;
     padding: 0.75em 1.5em 0.75em 1.5em;
     background-color: #222629;
-    border: 0;
     cursor: pointer;
-    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
-    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
-    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
     background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
     -moz-transition: background-color 0.35s ease-in-out;
     -webkit-transition: background-color 0.35s ease-in-out;
     -ms-transition: background-color 0.35s ease-in-out;
     transition: background-color 0.35s ease-in-out;
+    width: 30%;
+    left:43%;
+}
+.button-top{
+    left: 72%;
+    width: 20%;
+}
+.button-bottom{
+    width:50%;
+    left:32%;
 }
 
     input[type="button"]:hover,
@@ -2291,7 +2299,8 @@ button,
             #main > section.dark a {
                 color: #fff;
                 border-color: inherit;
-            }
+    height: 49px;
+}
 
                 #main > section.dark a:hover {
                     border-bottom-color: rgba(255, 255, 255, 0);
@@ -2701,7 +2710,7 @@ form {
 input {
     margin-bottom: 3px;
     padding: 10px;
-    width: 100%;
+    width: 231%;
     border: 1px solid #CCC
 }
 

@@ -3,3 +3,9 @@ c:\users\i170015\documents\visual studio 2012\Projects\zÉbET\zÉbET\bin\zÉbET.
 c:\users\i170015\documents\visual studio 2012\Projects\zÉbET\zÉbET\obj\Debug\zÉbET.csprojResolveAssemblyReference.cache
 c:\users\i170015\documents\visual studio 2012\Projects\zÉbET\zÉbET\obj\Debug\zÉbET.dll
 c:\users\i170015\documents\visual studio 2012\Projects\zÉbET\zÉbET\obj\Debug\zÉbET.pdb
+C:\Users\i170015\Source\Repos\Z-Bet\zÉbET\zÉbET\bin\zÉbET.dll.config
+C:\Users\i170015\Source\Repos\Z-Bet\zÉbET\zÉbET\bin\zÉbET.dll
+C:\Users\i170015\Source\Repos\Z-Bet\zÉbET\zÉbET\bin\zÉbET.pdb
+C:\Users\i170015\Source\Repos\Z-Bet\zÉbET\zÉbET\obj\Debug\zÉbET.csprojResolveAssemblyReference.cache
+C:\Users\i170015\Source\Repos\Z-Bet\zÉbET\zÉbET\obj\Debug\zÉbET.dll
+C:\Users\i170015\Source\Repos\Z-Bet\zÉbET\zÉbET\obj\Debug\zÉbET.pdb

@@ -60,7 +60,7 @@
 
                     <header id="wtf">
                         <h2 class="alt"><strong>Aposta na Desportiva.</strong></h2>
-                        <a href="#portfolio" class="button scrolly"><strong>Quero Apostar!</strong></a>
+                        <a href="#portfolio" class="button scrolly button-top"><strong>Quero Apostar!</strong></a>
 
                     </header>
 
@@ -274,7 +274,7 @@
                                 <textarea name="message" placeholder="Message"></textarea>
                             </div>
                             <div class="col-12">
-                                <button type='submit'>Enviar</button>
+                                <button type='submit' class="button-bottom">Enviar</button>
                             </div>
                         </div>
                     </form>
@@ -291,23 +291,25 @@
                 </header>
 
                 <input type='checkbox' id='form-switch'>
-                <form id='register-form' action="" method='post'>
-                    <input type="text" placeholder="Utilizador" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="password" placeholder="Password" required>
-                    <input type="password" placeholder="Re Password" required>
-                    <button type='submit'>Regista-te</button>
-                    <label for='form-switch'>Já és membro do ZÉ.BET? Clica aqui para iniciar sessão</label>
-                </form>
-                <form id='login-form' action="" method='post'>
-                    <input type="text" placeholder="Utilizador" required>
-                    <input type="password" placeholder="Password" required>
-                    <button type='submit'>Login</button>
-                    <label for='form-switch'><span>Regista-te</span></label>
-                </form>
+                <form id="registerform" runat="server">
+                    <asp:TextBox ID="txtUtilizador" runat="server" ></asp:TextBox>
+                    <asp:Label ID="lblUtilizador" runat="server" Text="" Visible="False" ForeColor="Red"></asp:Label>  
+                     <asp:TextBox ID="txtPassword" TextMode= "Password" runat="server" ></asp:TextBox>
+                    <label for='form-switch'><asp:Label ID="errorLabel" runat="server" Text="Label" ForeColor="#CC0000" Visible="False"></asp:Label>
+                    </label>
+                    <asp:TextBox ID="txtRePassword" TextMode= "Password" runat="server" ></asp:TextBox>   
+                    <label for='form-switch'>   
+                    <asp:Label ID="lblMatchPass" runat="server" Text="" Visible="False" ForeColor="Red"></asp:Label>                 
+                    <br />
+                    Já és membro do ZÉ.BET? Clica aqui para iniciar sessão</label>
+            
+            <%--        <asp:TextBox ID="txtUtilizadorLogin" runat="server" ></asp:TextBox>
+                    <asp:TextBox ID="txtPasswordLogin" TextMode= "Password" runat="server" ></asp:TextBox> 
+                   <asp:Button ID="BtnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
 
-
-
+                    <label for='form-switch'><span>Regista-te</span></label>--%>
+                    <asp:Button ID="btnRegista" runat="server" Text="Regista-te" OnClick="btnRegista_Click" />
+                    </form>
             </section>
 
         </div>
