@@ -59,7 +59,7 @@
             // 
             this.tbcTabs.Controls.Add(this.tpLogin);
             this.tbcTabs.Controls.Add(this.tpRegister);
-            this.tbcTabs.Location = new System.Drawing.Point(1, 12);
+            this.tbcTabs.Location = new System.Drawing.Point(6, 12);
             this.tbcTabs.Name = "tbcTabs";
             this.tbcTabs.SelectedIndex = 0;
             this.tbcTabs.Size = new System.Drawing.Size(267, 246);
