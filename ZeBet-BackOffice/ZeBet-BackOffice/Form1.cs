@@ -128,7 +128,7 @@ namespace ZeBet_BackOffice
                 return "Password should contain at least one upper case letter";
 
             if (!hasMiniMaxChars.IsMatch(password))
-                return "Password should be between 3 and 16 characters long";
+                return "Password should be between 8 and 16 characters long";
 
             if (!hasNumber.IsMatch(password))
                 return "Password should contain at least one numeric value";
