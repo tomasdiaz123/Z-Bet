@@ -79,7 +79,8 @@ namespace ZeBet_BackOffice
             else
             {
                 MessageBox.Show("Sucesso");
-                Form frm = new 
+                Form frm = new
+
                 txtUser.Clear();
                 txtPass.Clear();
             }
