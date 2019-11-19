@@ -16,5 +16,10 @@ namespace backOffice
         {
             InitializeComponent();
         }
+
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Owner.Show();
+        }
     }
 }

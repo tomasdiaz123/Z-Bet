@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Text.RegularExpressions;
+using backOffice;
 
 namespace ZeBet_BackOffice
 {
@@ -79,10 +80,14 @@ namespace ZeBet_BackOffice
             else
             {
                 MessageBox.Show("Sucesso");
-    
-
-                txtUser.Clear();
-                txtPass.Clear();
+                
+                Form frm = new Form2();
+                frm.Owner = this;
+                this.Hide();
+                frm.Show();
+                
+                //txtUser.Clear();
+               // txtPass.Clear();
             }
         }
 
