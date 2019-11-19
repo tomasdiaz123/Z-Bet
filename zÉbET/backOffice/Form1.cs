@@ -79,8 +79,7 @@ namespace ZeBet_BackOffice
             else
             {
                 MessageBox.Show("Sucesso");
-                Form frm = new Form2();
-                frm.Show();
+                Form frm = new 
                 txtUser.Clear();
                 txtPass.Clear();
             }
@@ -161,7 +160,7 @@ namespace ZeBet_BackOffice
         private string CheckUser(string user)
         {
             XmlDocument doc = new XmlDocument();
-            doc.Load("..\\..\\..\\..\\data.xml");
+            doc.Load("..\\..\\..\\data.xml");
 
             foreach (XmlNode node in doc.DocumentElement.SelectSingleNode("Users"))
             {
