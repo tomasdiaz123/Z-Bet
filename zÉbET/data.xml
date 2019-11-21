@@ -14,6 +14,9 @@
     </user>
     <user name="erswerewr" pass="Aaa1234$" nivel="user" saldo="0" />
     <user name="banana" pass="123Banana$" nivel="user" saldo="0" />
+    <user name="OLA" pass="Aaa^^123" nivel="user" saldo="0" />
+    <user name="hey" pass="Aaa^^123" nivel="user" saldo="0" />
+    <user name="hey2" pass="alA^^123" nivel="user" saldo="0" />
   </Users>
   <jogos>
     <jogo id="1" team1="benfica" team2="porto">

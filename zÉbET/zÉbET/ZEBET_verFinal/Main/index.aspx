@@ -33,10 +33,11 @@
                         <li><a href="#register"><span class="icon solid fa-user">Login / Regista-te!</span></a></li>
                     </ul>
                 </nav>
-
-            </div>
-
-            <div class="bottom">
+                <p>
+                    <br /><br /><br /><br /><br /><br /><br />
+                    <asp:Label ID="Label5" runat="server" Text=""></asp:Label><br />
+                    <asp:Label ID="Label6" runat="server" Text="" CssClass="left_align"></asp:Label>
+                </p>
 
                 <!-- Social Icons -->
                 <ul class="icons">
@@ -286,29 +287,30 @@
 
             <!-- REGISTER -->
             <section id="register" class="five">
-                <header>
-                    <h2>Regista-te Já e começa a Apostar!</h2>
-                </header>
-
-                <input type='checkbox' id='form-switch'>
                 <form id="registerform" runat="server">
-                    <asp:TextBox ID="txtUtilizador" runat="server" ></asp:TextBox>
-                    <asp:Label ID="lblUtilizador" runat="server" Text="" Visible="False" ForeColor="Red"></asp:Label>  
-                     <asp:TextBox ID="txtPassword" TextMode= "Password" runat="server" ></asp:TextBox>
-                    <label for='form-switch'><asp:Label ID="errorLabel" runat="server" Text="Label" ForeColor="#CC0000" Visible="False"></asp:Label>
+
+                     <asp:Label font-size="70px" ID="lblRegista" runat="server" Text="Regista-te!"></asp:Label><br /><br />
+                     Username<asp:TextBox ID="txtUtilizador" runat="server" ></asp:TextBox>
+                    <asp:Label ID="lblUtilizador" runat="server" Text="" Visible="False" ForeColor="Red"></asp:Label>  <br />
+                     Password<asp:TextBox ID="txtPassword" TextMode= "Password" runat="server" ></asp:TextBox><br />
+                    <label for='form-switch'><asp:Label ID="errorLabel" runat="server" Text="Label" ForeColor="#CC0000" Visible="False"></asp:Label><br />
                     </label>
-                    <asp:TextBox ID="txtRePassword" TextMode= "Password" runat="server" ></asp:TextBox>   
-                    <label for='form-switch'>   
-                    <asp:Label ID="lblMatchPass" runat="server" Text="" Visible="False" ForeColor="Red"></asp:Label>                 
+                    Confirma a Password<asp:TextBox ID="txtRePassword" TextMode= "Password" runat="server" ></asp:TextBox>   
+                    <asp:Label ID="lblMatchPass" runat="server" Text="" Visible="False" ForeColor="Red"></asp:Label>        <br />         
                     <br />
-                    Já és membro do ZÉ.BET? Clica aqui para iniciar sessão</label>
-            
             <%--        <asp:TextBox ID="txtUtilizadorLogin" runat="server" ></asp:TextBox>
                     <asp:TextBox ID="txtPasswordLogin" TextMode= "Password" runat="server" ></asp:TextBox> 
                    <asp:Button ID="BtnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
 
                     <label for='form-switch'><span>Regista-te</span></label>--%>
-                    <asp:Button ID="btnRegista" runat="server" Text="Regista-te" OnClick="btnRegista_Click" />
+                    <asp:Button ID="btnRegista" runat="server" Text="Regista-te" OnClick="btnRegista_Click" /><br /><br /><br />
+                   <%-- Login --%>  
+                    <asp:Label font-size="70px" ID="Label1" runat="server" Text="Login"></asp:Label><br /><br />    
+                     Username<asp:TextBox ID="txtUsernameL" runat="server" ></asp:TextBox>
+                     Password<asp:TextBox ID="txtPassowordL" TextMode= "Password" runat="server" ></asp:TextBox>
+                    <asp:Label ID="Label4" runat="server" Text="" Visible="False" ForeColor="Red"></asp:Label>   <br />    <br />
+                    <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click"  /><br /><br /><br />
+
                     </form>
             </section>
 
