@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Text.RegularExpressions;
+using backOffice;
 
 namespace ZeBet_BackOffice
 {
@@ -38,7 +39,7 @@ namespace ZeBet_BackOffice
                 {
                     errorProvider1.Clear();
                     XmlDocument doc = new XmlDocument();
-                    doc.Load("..\\..\\..\\..\\data.xml");
+                    doc.Load("..\\..\\..\\data.xml");
 
                     XmlNode Users = doc.SelectSingleNode("ZEBET").SelectSingleNode("Users");
                     XmlNode user = doc.CreateElement("user");
@@ -62,7 +63,7 @@ namespace ZeBet_BackOffice
 
                     Users.AppendChild(user);
 
-                    doc.Save("..\\..\\..\\..\\data.xml");
+                    doc.Save("..\\..\\..\\data.xml");
                     MessageBox.Show("Registado com sucessso!");
                 }
             }
@@ -79,10 +80,15 @@ namespace ZeBet_BackOffice
             else
             {
                 MessageBox.Show("Sucesso");
-    
+                
+                Form frm = new Form2();
+                frm.Owner = this;
+                this.Hide();
+                frm.Show();
 
-                txtUser.Clear();
-                txtPass.Clear();
+                txtPass.Text = "";
+                //txtUser.Clear();
+               // txtPass.Clear();
             }
         }
 
@@ -176,7 +182,6 @@ namespace ZeBet_BackOffice
             return "";
         }
 
-        
     }
 }
 
