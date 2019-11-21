@@ -1,6 +1,6 @@
 <ZEBET>
   <Users>
-    <user name="joseCosta10" pass="Banana%123" nivel="admin" saldo="1001.01">
+    <user name="joseCosta10" pass="Banana%123" nivel="admin" saldo="1021,01">
       <apostas>
         <jogo id="1">
           <aposta type="1" amount="50" />
@@ -13,7 +13,9 @@
       </apostas>
     </user>
     <user name="erswerewr" pass="Aaa1234$" nivel="user" saldo="0" />
-    <user name="banana" pass="123Banana$" nivel="user" saldo="0" />
+    <user name="XxbananaxX" pass="123Banana$" nivel="admin" saldo="15" />
+    <user name="ola" pass="123" nivel="admin" saldo="0,01" />
+    <user name="tomas" pass="tomas123" nivel="user" saldo="50000" />
   </Users>
   <jogos>
     <jogo id="1" team1="benfica" team2="porto">

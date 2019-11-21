@@ -85,7 +85,8 @@ namespace ZeBet_BackOffice
                 frm.Owner = this;
                 this.Hide();
                 frm.Show();
-                
+
+                txtPass.Text = "";
                 //txtUser.Clear();
                // txtPass.Clear();
             }
