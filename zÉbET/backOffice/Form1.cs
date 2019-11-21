@@ -39,7 +39,7 @@ namespace ZeBet_BackOffice
                 {
                     errorProvider1.Clear();
                     XmlDocument doc = new XmlDocument();
-                    doc.Load("..\\..\\..\\..\\data.xml");
+                    doc.Load("..\\..\\..\\data.xml");
 
                     XmlNode Users = doc.SelectSingleNode("ZEBET").SelectSingleNode("Users");
                     XmlNode user = doc.CreateElement("user");
@@ -63,7 +63,7 @@ namespace ZeBet_BackOffice
 
                     Users.AppendChild(user);
 
-                    doc.Save("..\\..\\..\\..\\data.xml");
+                    doc.Save("..\\..\\..\\data.xml");
                     MessageBox.Show("Registado com sucessso!");
                 }
             }
@@ -181,7 +181,6 @@ namespace ZeBet_BackOffice
             return "";
         }
 
-        
     }
 }
 
