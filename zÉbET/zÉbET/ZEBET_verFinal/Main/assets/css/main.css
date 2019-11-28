@@ -27,6 +27,13 @@ section, summary, time, mark, audio, video {
    
     
 }
+p{
+    text-align:center;
+}
+Login{
+    height:200px;
+    width:200px;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -104,7 +111,7 @@ body {
         -webkit-transition: none !important;
         -ms-transition: none !important;
         transition: none !important;
-    width: 302px;
+    width: 342px;
 }
 
 input, textarea, select {
@@ -180,10 +187,6 @@ a {
     text-decoration: none;
     color: inherit;
     border-bottom: dotted 1px rgba(128, 128, 128, 0.5);
-    -moz-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-    -webkit-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-    -ms-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-    transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
     outline: 0;
 }
 
@@ -1892,6 +1895,11 @@ form label {
     display: block;
     text-align: left;
     margin-bottom: 0.5em;
+    
+}
+.label-top{
+    text-align:left;
+    color:red;
 }
 
 form input[type="text"],
@@ -1931,6 +1939,8 @@ form input[type="email"],
 form input[type="password"],
 form select {
     line-height: 1.25em;
+    top: -1px;
+    left: 0px;
 }
 
 form textarea {
@@ -2216,7 +2226,9 @@ button,
                 position: relative;
                 display: block;
                 font-size: 0.8em;
-            }
+    top: 2px;
+    left: 0px;
+}
 
                 #nav ul li a span:before {
                     position: absolute;

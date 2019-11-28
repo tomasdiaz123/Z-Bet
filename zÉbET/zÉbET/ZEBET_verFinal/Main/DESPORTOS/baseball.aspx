@@ -19,7 +19,7 @@
 					<!-- Logo -->
 						<div id="logo">
 							<span class="image avatar48"><img src="images/appinventor.ai_robson_ppena.CARTOLA.png" alt="" /></span>
-							<h1 id="title">ZÉ.<a style="color: #ff6a00">BET</a></h1>
+							<h1 id="title">ZÉ.<a href="../index.aspx" style="color: #ff6a00">BET</a></h1>
 							<p>Site de apostas</p>
 						</div>
 
