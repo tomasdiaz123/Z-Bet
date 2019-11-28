@@ -13,10 +13,9 @@
       </apostas>
     </user>
     <user name="erswerewr" pass="Aaa1234$" nivel="user" saldo="0" />
-    <user name="XxbananaxX" pass="123Banana$" nivel="admin" saldo="50" />
+    <user name="XxbananaxX" pass="123Banana$" nivel="admin" saldo="15" />
     <user name="ola" pass="123" nivel="admin" saldo="0,01" />
     <user name="tomas" pass="tomas123" nivel="user" saldo="50000" />
-    <user name="lijgdsks" pass="oiesroiwr" nivel="user" saldo="14" />
   </Users>
   <jogos>
     <jogo id="1" team1="benfica" team2="porto">
