@@ -20,7 +20,7 @@
 
                     <a href="#top" id="top-link"> <span class="image avatar48"><img src="images/appinventor.ai_robson_ppena.CARTOLA.png" alt="" /></span></a>
                     <a href="#top" id="A1"><h1 id="title">ZÉ.<a style="color: #ff6a00">BET</a></h1></a>
-                    <p>Site de apostas</p>
+                    <p style="text-align:right">Site de apostas</p>
                 </div>
 
                 <!-- Nav -->
@@ -34,9 +34,9 @@
                     </ul>
                 </nav>
                 <p>
-                    <br /><br /><br /><br /><br /><br /><br />
-                    <asp:Label ID="Label5" runat="server" Text=""></asp:Label><br />
-                    <asp:Label ID="Label6" runat="server" Text="" CssClass="left_align"></asp:Label>
+                    <br /><br /><br /><br /><br />
+                    <p style="text-align:right"><asp:Label ID="Label5" runat="server" Text=""></asp:Label><br />
+                         <asp:Label ID="Label6" runat="server" Text="" CssClass="left_align"></asp:Label></p>
                 </p>
 
                 <!-- Social Icons -->

@@ -113,7 +113,7 @@ namespace zÉbET
                 Label4.ForeColor = System.Drawing.Color.Green;
                 Label4.Text="Sucesso";
                 Label5.Text = "<left>Olá " + txtUsernameL.Text+"</left>";
-                Label6.Text = "<left>" + "O seu saldo é:"+ GetSaldo(txtUsernameL.Text) ;
+                Label6.Text = "<left>" + "O seu saldo é: "+ GetSaldo(txtUsernameL.Text)+"€" ;
             }
         }
         private string ValidatePassword(string password)
