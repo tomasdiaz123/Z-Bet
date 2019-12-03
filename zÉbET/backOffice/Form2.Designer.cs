@@ -30,6 +30,7 @@
         {
             this.tbcTabs = new System.Windows.Forms.TabControl();
             this.tpUsers = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -43,22 +44,35 @@
             this.chNivel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chSaldo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tpJogos = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.btnSave2 = new System.Windows.Forms.Button();
+            this.btnSend2 = new System.Windows.Forms.Button();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnNewGame = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnResult = new System.Windows.Forms.Button();
+            this.chId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chTeam1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chTeam2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chOdd1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chOddX = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chOdd2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chModalidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chLiga = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tbcTabs.SuspendLayout();
             this.tpUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSaldo)).BeginInit();
             this.tpJogos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcTabs
@@ -90,6 +104,15 @@
             this.tpUsers.TabIndex = 0;
             this.tpUsers.Text = "Users";
             this.tpUsers.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(175, 67);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Saldo";
             // 
             // txtPass
             // 
@@ -202,8 +225,14 @@
             // 
             // tpJogos
             // 
-            this.tpJogos.Controls.Add(this.button2);
-            this.tpJogos.Controls.Add(this.button1);
+            this.tpJogos.Controls.Add(this.btnResult);
+            this.tpJogos.Controls.Add(this.btnClose);
+            this.tpJogos.Controls.Add(this.btnNewGame);
+            this.tpJogos.Controls.Add(this.label5);
+            this.tpJogos.Controls.Add(this.label4);
+            this.tpJogos.Controls.Add(this.label2);
+            this.tpJogos.Controls.Add(this.btnSave2);
+            this.tpJogos.Controls.Add(this.btnSend2);
             this.tpJogos.Controls.Add(this.numericUpDown3);
             this.tpJogos.Controls.Add(this.numericUpDown2);
             this.tpJogos.Controls.Add(this.numericUpDown1);
@@ -218,75 +247,190 @@
             this.tpJogos.Text = "Jogos";
             this.tpJogos.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // btnSave2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(175, 67);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 13);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Saldo";
+            this.btnSave2.Location = new System.Drawing.Point(188, 373);
+            this.btnSave2.Name = "btnSave2";
+            this.btnSave2.Size = new System.Drawing.Size(75, 23);
+            this.btnSave2.TabIndex = 7;
+            this.btnSave2.Text = "Guardar";
+            this.btnSave2.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // btnSend2
             // 
-            this.listView1.Location = new System.Drawing.Point(279, 6);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(431, 402);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(15, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 20);
-            this.textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(15, 124);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(167, 20);
-            this.textBox2.TabIndex = 2;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(188, 46);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(85, 20);
-            this.numericUpDown1.TabIndex = 3;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(188, 85);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(85, 20);
-            this.numericUpDown2.TabIndex = 4;
+            this.btnSend2.Location = new System.Drawing.Point(198, 166);
+            this.btnSend2.Name = "btnSend2";
+            this.btnSend2.Size = new System.Drawing.Size(75, 36);
+            this.btnSend2.TabIndex = 6;
+            this.btnSend2.Text = ">>";
+            this.btnSend2.UseVisualStyleBackColor = true;
             // 
             // numericUpDown3
             // 
+            this.numericUpDown3.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
             this.numericUpDown3.Location = new System.Drawing.Point(188, 124);
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(85, 20);
             this.numericUpDown3.TabIndex = 5;
             // 
-            // button1
+            // numericUpDown2
             // 
-            this.button1.Location = new System.Drawing.Point(34, 191);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.numericUpDown2.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.numericUpDown2.Location = new System.Drawing.Point(188, 85);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(85, 20);
+            this.numericUpDown2.TabIndex = 4;
             // 
-            // button2
+            // numericUpDown1
             // 
-            this.button2.Location = new System.Drawing.Point(175, 191);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.numericUpDown1.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.numericUpDown1.Location = new System.Drawing.Point(188, 46);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(85, 20);
+            this.numericUpDown1.TabIndex = 3;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(15, 124);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(167, 20);
+            this.textBox2.TabIndex = 2;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(15, 45);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(167, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.chId,
+            this.chModalidade,
+            this.chLiga,
+            this.chTeam1,
+            this.chOdd1,
+            this.chOddX,
+            this.chOdd2,
+            this.chTeam2});
+            this.listView1.Location = new System.Drawing.Point(279, 6);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(431, 402);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Equipa 1";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(139, 87);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Empate";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 108);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Equipa2";
+            // 
+            // btnNewGame
+            // 
+            this.btnNewGame.Location = new System.Drawing.Point(15, 373);
+            this.btnNewGame.Name = "btnNewGame";
+            this.btnNewGame.Size = new System.Drawing.Size(75, 23);
+            this.btnNewGame.TabIndex = 11;
+            this.btnNewGame.Text = "Novo Jogo";
+            this.btnNewGame.UseVisualStyleBackColor = true;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(15, 166);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 36);
+            this.btnClose.TabIndex = 12;
+            this.btnClose.Text = "Fechar Apostas";
+            this.btnClose.UseVisualStyleBackColor = true;
+            // 
+            // btnResult
+            // 
+            this.btnResult.Location = new System.Drawing.Point(107, 166);
+            this.btnResult.Name = "btnResult";
+            this.btnResult.Size = new System.Drawing.Size(75, 36);
+            this.btnResult.TabIndex = 13;
+            this.btnResult.Text = "Resultado";
+            this.btnResult.UseVisualStyleBackColor = true;
+            // 
+            // chId
+            // 
+            this.chId.Text = "Id";
+            this.chId.Width = 48;
+            // 
+            // chTeam1
+            // 
+            this.chTeam1.Text = "Equipa1";
+            this.chTeam1.Width = 69;
+            // 
+            // chTeam2
+            // 
+            this.chTeam2.Text = "Equipa2";
+            this.chTeam2.Width = 77;
+            // 
+            // chOdd1
+            // 
+            this.chOdd1.Text = "1";
+            this.chOdd1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chOdd1.Width = 30;
+            // 
+            // chOddX
+            // 
+            this.chOddX.Text = "X";
+            this.chOddX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chOddX.Width = 30;
+            // 
+            // chOdd2
+            // 
+            this.chOdd2.Text = "2";
+            this.chOdd2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chOdd2.Width = 30;
+            // 
+            // chModalidade
+            // 
+            this.chModalidade.Text = "Modalidade";
+            this.chModalidade.Width = 78;
+            // 
+            // chLiga
+            // 
+            this.chLiga.Text = "Liga";
+            this.chLiga.Width = 63;
             // 
             // Form2
             // 
@@ -304,9 +448,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numSaldo)).EndInit();
             this.tpJogos.ResumeLayout(false);
             this.tpJogos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -329,13 +473,27 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSave2;
+        private System.Windows.Forms.Button btnSend2;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnResult;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnNewGame;
+        private System.Windows.Forms.ColumnHeader chId;
+        private System.Windows.Forms.ColumnHeader chModalidade;
+        private System.Windows.Forms.ColumnHeader chLiga;
+        private System.Windows.Forms.ColumnHeader chTeam1;
+        private System.Windows.Forms.ColumnHeader chOdd1;
+        private System.Windows.Forms.ColumnHeader chOddX;
+        private System.Windows.Forms.ColumnHeader chOdd2;
+        private System.Windows.Forms.ColumnHeader chTeam2;
     }
 }
