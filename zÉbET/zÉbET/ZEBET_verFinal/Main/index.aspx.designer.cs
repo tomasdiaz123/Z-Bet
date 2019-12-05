@@ -13,6 +13,15 @@ namespace zÉbET {
     public partial class index {
         
         /// <summary>
+        /// registerform control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm registerform;
+        
+        /// <summary>
         /// Label5 control.
         /// </summary>
         /// <remarks>
@@ -31,13 +40,13 @@ namespace zÉbET {
         protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
-        /// registerform control.
+        /// btnLogout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm registerform;
+        protected global::System.Web.UI.WebControls.Button btnLogout;
         
         /// <summary>
         /// lblRegista control.

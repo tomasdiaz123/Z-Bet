@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -64,7 +65,7 @@
     <Content Include="ZEBET_verFinal\Main\DESPORTOS\snooker.aspx" />
     <Content Include="ZEBET_verFinal\Main\DESPORTOS\tennis.aspx" />
     <Content Include="ZEBET_verFinal\Main\index.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="ZEBET_verFinal\Web.config" />
     <Content Include="ZEBET_verFinal\fut\assets\css\cssFutebol.css" />
     <Content Include="ZEBET_verFinal\fut\assets\css\fontawesome-all.min.css" />
     <Content Include="ZEBET_verFinal\fut\assets\css\images\ie\grad0-15.svg" />
@@ -255,10 +256,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Web.Debug.config">
+    <Content Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="ZEBET_verFinal\Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <None Include="Web.Release.config">
+    <None Include="ZEBET_verFinal\Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <Content Include="ZEBET_verFinal\fut\assets\sass\libs\_breakpoints.scss" />

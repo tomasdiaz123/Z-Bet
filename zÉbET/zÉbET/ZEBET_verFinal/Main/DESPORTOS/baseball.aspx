@@ -3,6 +3,8 @@
 <!DOCTYPE html>
 
 <html>
+  <%--  <%Session["User"] = Request.Form["txt_UserL"]; 
+        Session["Saldo"] = %>--%>
 	<head>
 		<title>Baseball|ZéBet</title>
 		<meta charset="us-ascii" />

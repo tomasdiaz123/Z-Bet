@@ -20,6 +20,7 @@
     <user name="OLA" pass="Aaa^^123" nivel="user" saldo="0" />
     <user name="hey" pass="Aaa^^123" nivel="user" saldo="0" />
     <user name="hey2" pass="alA^^123" nivel="user" saldo="0" />
+    <user name="nunes" pass="A#berto123" nivel="user" saldo="0" />
   </Users>
   <jogos>
     <jogo id="1" team1="benfica" team2="porto">
