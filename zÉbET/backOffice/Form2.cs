@@ -167,5 +167,19 @@ namespace backOffice
                 btnSend.Enabled = true;
             }
         }
+
+        private void btnNewGame_Click(object sender, EventArgs e)
+        {
+            FormAddJogo formAddGame = new FormAddJogo();
+
+            formAddGame.ShowDialog();
+
+            formAddGame.jogo.
+        }
+
+        private lsvAddJogo (Jogo jogo)
+        {
+
+        }
     }
 }
