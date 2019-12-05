@@ -65,6 +65,7 @@ namespace backOffice
             if (lsvUsers.SelectedItems.Count > 0)
             {
                 txtPass.Visible = false;
+                lblPassword.Visible = false;
                 txtUserName.Text = lsvUsers.SelectedItems[0].Text;
                 cbbNivel.Text = lsvUsers.SelectedItems[0].SubItems[1].Text;
                 numSaldo.Value = Convert.ToDecimal(lsvUsers.SelectedItems[0].SubItems[2].Text);
@@ -72,6 +73,7 @@ namespace backOffice
             else
             {
                 txtPass.Visible = true;
+                lblPassword.Visible = true;
                 txtUserName.Text = "";
                 txtPass.Text = "";
                 numSaldo.Value = 0;
