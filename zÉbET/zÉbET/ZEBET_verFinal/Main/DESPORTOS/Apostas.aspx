@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 
 <html>
+    <form id="formA" runat="server">
   <%--  <%Session["User"] = Request.Form["txt_UserL"]; 
         Session["Saldo"] = %>--%>
 	<head>
@@ -23,18 +24,13 @@
 							<span class="image avatar48"><img src="images/appinventor.ai_robson_ppena.CARTOLA.png" alt="" /></span>
 							<h1 id="title">ZÉ.<a href="../index.aspx" style="color: #ff6a00">BET</a></h1>
 							<p>Site de apostas</p>
+                        
 						</div>
 
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
 								<li><a href="../index.aspx" id="top-link"><span class="icon solid fa-home">Inicio</span></a></li>
-								<li><a href="../baseball.aspx" id="baseball-link"> <span class="fas fa-baseball-ball" >Baseball</span></></a></li>
-								<li><a href="../Basket.aspx" id="A1"> <span class="fas fa-basketball-ball">Basketball </span></></a></li>
-								<li><a href="../futbol.aspx" id="Futebol-link"><span class="fas fa-futbol">Futebol  </span></a></li>
-                                <li><a href="../HoqueinoGelo.aspx" id="Hoquei no gelo link"><span class="fas fa-hockey-puck">Hoquei no gelo </span></a></li>
-                                <li><a href="../snooker.aspx" id="snooker link"><span class="fas fa-dot-circle">snooker </span></a></li>
-                                <li><a href="../tennis.aspx" id="tennis link"><span class="fas fa-toilet-paper">tennis </span></a></li>
 							</ul>
 						</nav>
 
@@ -43,12 +39,7 @@
 				<div class="bottom">
 
 					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<ul class="icon">
 						</ul>
 
 				</div>
@@ -60,7 +51,25 @@
                 <br />
                 <h2><p style="text-align:center">BOLETIM</p></h2>
                 <hr />
-
+                     Hoquei<asp:RadioButton ID="rdbHoquei" runat="server"  Visible="true" height="20px" width="20px" Checked="true" />Futebol<asp:RadioButton ID="rdbFutebol" runat="server" />Basket<asp:RadioButton ID="rdbBasket" runat="server" />Volei<asp:RadioButton ID="rdbVolei" runat="server" />Snooker<asp:RadioButton ID="rdbSnooker" runat="server" />Volei<asp:RadioButton ID="Basebol" runat="server" />
+                <hr />
+               <h3> Liga Portuguesa</h3>
+                <hr />
+                <b><asp:Label ID="Label1" runat="server" Text="Benfica[2.15] X[3.0] Porto[2.5]"></asp:Label><br /></b>
+                <asp:Label ID="Label2" runat="server" Text="Aves[3.15] X[3.0] Sporting[1.55]"></asp:Label><br />
+                <asp:Label ID="Label3" runat="server" Text="Braga[1.2]x[3.15] Famalicão[2.15]"></asp:Label><br />
+                <hr />
+                <h3>Liga Fracesa</h3>
+                <hr />
+                <b><asp:Label ID="Label4" runat="server" Text="PSG[2.15] X[3.0] LYON[2.5]"></asp:Label><br /></b>
+                <asp:Label ID="Label5" runat="server" Text="PSG[2.15] X[3.0] LYON[2.5]"></asp:Label><br />
+                <asp:Label ID="Label6" runat="server" Text="lille[1.2] x[3.15] Nimes[2.15]"></asp:Label><br />
+                <hr />
+                <h3>Liga Inglesa</h3>
+                <hr />
+                <b><asp:Label ID="Label7" runat="server" Text="Wolves[2.15] X[3.0] Leicester[2.5]"></asp:Label><br /></b>
+                <asp:Label ID="Label8" runat="server" Text="Mun.City[2.15] X[3.0] Mun.United[2.5]"></asp:Label><br />
+                <asp:Label ID="Label9" runat="server" Text="Arsenal[1.2] x[3.15] Newcastle[2.15]"></asp:Label><br />
             </div>
 		<!-- Footer -->
 			<div id="footer">
@@ -82,4 +91,5 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+    </form>
 </html>
