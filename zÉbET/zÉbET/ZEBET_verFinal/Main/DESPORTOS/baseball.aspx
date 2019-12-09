@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="assets/css/cssFutebol.css" />
 	</head>
 	<body class="is-preload">
-
+        <form runat="server" id="form2" action="Apostas.aspx">
 		<!-- Header -->
 			<div id="header">
 
@@ -192,7 +192,7 @@
 
                                 </div>
                             </section>
-
+                </form>
 		<!-- Footer -->
 			<div id="footer">
                 
