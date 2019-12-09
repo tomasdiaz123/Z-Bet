@@ -44,6 +44,12 @@
             this.chNivel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chSaldo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tpJogos = new System.Windows.Forms.TabPage();
+            this.btnResult = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnNewGame = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnSave2 = new System.Windows.Forms.Button();
             this.btnSend2 = new System.Windows.Forms.Button();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
@@ -52,20 +58,14 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnNewGame = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnResult = new System.Windows.Forms.Button();
             this.chId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chModalidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chLiga = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chTeam1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chTeam2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chOdd1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chOddX = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chOdd2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chModalidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chLiga = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chTeam2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tbcTabs.SuspendLayout();
             this.tpUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSaldo)).BeginInit();
@@ -247,6 +247,61 @@
             this.tpJogos.Text = "Jogos";
             this.tpJogos.UseVisualStyleBackColor = true;
             // 
+            // btnResult
+            // 
+            this.btnResult.Location = new System.Drawing.Point(107, 166);
+            this.btnResult.Name = "btnResult";
+            this.btnResult.Size = new System.Drawing.Size(75, 36);
+            this.btnResult.TabIndex = 13;
+            this.btnResult.Text = "Resultado";
+            this.btnResult.UseVisualStyleBackColor = true;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(15, 166);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 36);
+            this.btnClose.TabIndex = 12;
+            this.btnClose.Text = "Fechar Apostas";
+            this.btnClose.UseVisualStyleBackColor = true;
+            // 
+            // btnNewGame
+            // 
+            this.btnNewGame.Location = new System.Drawing.Point(15, 373);
+            this.btnNewGame.Name = "btnNewGame";
+            this.btnNewGame.Size = new System.Drawing.Size(75, 23);
+            this.btnNewGame.TabIndex = 11;
+            this.btnNewGame.Text = "Novo Jogo";
+            this.btnNewGame.UseVisualStyleBackColor = true;
+            this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 108);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Equipa2";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(139, 87);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Empate";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Equipa 1";
+            // 
             // btnSave2
             // 
             this.btnSave2.Location = new System.Drawing.Point(188, 373);
@@ -335,74 +390,25 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Equipa 1";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(139, 87);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Empate";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 108);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Equipa2";
-            // 
-            // btnNewGame
-            // 
-            this.btnNewGame.Location = new System.Drawing.Point(15, 373);
-            this.btnNewGame.Name = "btnNewGame";
-            this.btnNewGame.Size = new System.Drawing.Size(75, 23);
-            this.btnNewGame.TabIndex = 11;
-            this.btnNewGame.Text = "Novo Jogo";
-            this.btnNewGame.UseVisualStyleBackColor = true;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Location = new System.Drawing.Point(15, 166);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 36);
-            this.btnClose.TabIndex = 12;
-            this.btnClose.Text = "Fechar Apostas";
-            this.btnClose.UseVisualStyleBackColor = true;
-            // 
-            // btnResult
-            // 
-            this.btnResult.Location = new System.Drawing.Point(107, 166);
-            this.btnResult.Name = "btnResult";
-            this.btnResult.Size = new System.Drawing.Size(75, 36);
-            this.btnResult.TabIndex = 13;
-            this.btnResult.Text = "Resultado";
-            this.btnResult.UseVisualStyleBackColor = true;
-            // 
             // chId
             // 
             this.chId.Text = "Id";
             this.chId.Width = 48;
             // 
+            // chModalidade
+            // 
+            this.chModalidade.Text = "Modalidade";
+            this.chModalidade.Width = 78;
+            // 
+            // chLiga
+            // 
+            this.chLiga.Text = "Liga";
+            this.chLiga.Width = 63;
+            // 
             // chTeam1
             // 
             this.chTeam1.Text = "Equipa1";
             this.chTeam1.Width = 69;
-            // 
-            // chTeam2
-            // 
-            this.chTeam2.Text = "Equipa2";
-            this.chTeam2.Width = 77;
             // 
             // chOdd1
             // 
@@ -422,15 +428,10 @@
             this.chOdd2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.chOdd2.Width = 30;
             // 
-            // chModalidade
+            // chTeam2
             // 
-            this.chModalidade.Text = "Modalidade";
-            this.chModalidade.Width = 78;
-            // 
-            // chLiga
-            // 
-            this.chLiga.Text = "Liga";
-            this.chLiga.Width = 63;
+            this.chTeam2.Text = "Equipa2";
+            this.chTeam2.Width = 77;
             // 
             // Form2
             // 

@@ -28,81 +28,81 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtE1 = new System.Windows.Forms.TextBox();
+            this.txtE2 = new System.Windows.Forms.TextBox();
+            this.numE1 = new System.Windows.Forms.NumericUpDown();
+            this.numE2 = new System.Windows.Forms.NumericUpDown();
+            this.numX = new System.Windows.Forms.NumericUpDown();
+            this.txtLiga = new System.Windows.Forms.TextBox();
+            this.cbbModalidade = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblEquipa1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numE1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numE2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numX)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtE1
             // 
-            this.textBox1.Location = new System.Drawing.Point(33, 89);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(120, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtE1.Location = new System.Drawing.Point(33, 89);
+            this.txtE1.Name = "txtE1";
+            this.txtE1.Size = new System.Drawing.Size(120, 20);
+            this.txtE1.TabIndex = 0;
             // 
-            // textBox2
+            // txtE2
             // 
-            this.textBox2.Location = new System.Drawing.Point(354, 90);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(129, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtE2.Location = new System.Drawing.Point(354, 90);
+            this.txtE2.Name = "txtE2";
+            this.txtE2.Size = new System.Drawing.Size(129, 20);
+            this.txtE2.TabIndex = 1;
             // 
-            // numericUpDown1
+            // numE1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(159, 89);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDown1.TabIndex = 2;
+            this.numE1.Location = new System.Drawing.Point(159, 89);
+            this.numE1.Name = "numE1";
+            this.numE1.Size = new System.Drawing.Size(59, 20);
+            this.numE1.TabIndex = 2;
             // 
-            // numericUpDown2
+            // numE2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(289, 90);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDown2.TabIndex = 3;
+            this.numE2.Location = new System.Drawing.Point(289, 90);
+            this.numE2.Name = "numE2";
+            this.numE2.Size = new System.Drawing.Size(59, 20);
+            this.numE2.TabIndex = 3;
             // 
-            // numericUpDown3
+            // numX
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(224, 89);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDown3.TabIndex = 4;
+            this.numX.Location = new System.Drawing.Point(224, 89);
+            this.numX.Name = "numX";
+            this.numX.Size = new System.Drawing.Size(59, 20);
+            this.numX.TabIndex = 4;
             // 
-            // textBox3
+            // txtLiga
             // 
-            this.textBox3.Location = new System.Drawing.Point(169, 38);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtLiga.Location = new System.Drawing.Point(169, 38);
+            this.txtLiga.Name = "txtLiga";
+            this.txtLiga.Size = new System.Drawing.Size(100, 20);
+            this.txtLiga.TabIndex = 5;
             // 
-            // comboBox1
+            // cbbModalidade
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbbModalidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbModalidade.FormattingEnabled = true;
+            this.cbbModalidade.Items.AddRange(new object[] {
             "Futebol",
             "Basquetebol",
             "Basebol",
-            "Hóquei",
-            "Ténis",
+            "Hoquei",
+            "Tenis",
             "Snooker"});
-            this.comboBox1.Location = new System.Drawing.Point(32, 37);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 6;
+            this.cbbModalidade.Location = new System.Drawing.Point(32, 37);
+            this.cbbModalidade.Name = "cbbModalidade";
+            this.cbbModalidade.Size = new System.Drawing.Size(121, 21);
+            this.cbbModalidade.TabIndex = 6;
             // 
             // label1
             // 
@@ -157,6 +157,7 @@
             this.btnConfirm.TabIndex = 12;
             this.btnConfirm.Text = "Confirmar";
             this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // FormAddJogo
             // 
@@ -169,18 +170,18 @@
             this.Controls.Add(this.lblEquipa1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cbbModalidade);
+            this.Controls.Add(this.txtLiga);
+            this.Controls.Add(this.numX);
+            this.Controls.Add(this.numE2);
+            this.Controls.Add(this.numE1);
+            this.Controls.Add(this.txtE2);
+            this.Controls.Add(this.txtE1);
             this.Name = "FormAddJogo";
             this.Text = "Novo Jogo";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numE1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numE2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numX)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,13 +189,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtE1;
+        private System.Windows.Forms.TextBox txtE2;
+        private System.Windows.Forms.NumericUpDown numE1;
+        private System.Windows.Forms.NumericUpDown numE2;
+        private System.Windows.Forms.NumericUpDown numX;
+        private System.Windows.Forms.TextBox txtLiga;
+        private System.Windows.Forms.ComboBox cbbModalidade;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblEquipa1;

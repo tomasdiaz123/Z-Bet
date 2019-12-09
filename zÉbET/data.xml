@@ -23,15 +23,15 @@
     <user name="nunes" pass="A#berto123" nivel="user" saldo="0" />
   </Users>
   <jogos>
-    <jogo id="1" modalidade="fut" liga="pt" team1="benfica" team2="porto" closed="0" res="tbd">
-      <odd value="1.20" />
-      <odd value="3" />
+    <jogo id="1" modalidade="Futebol" liga="pt" team1="benfica" team2="porto" closed="0" res="tbd">
+      <odd value="2.20" />
+      <odd value="1.5" />
       <odd value="1.5" />
     </jogo>
     <jogo id="2" modalidade="fut" liga="pt" team1="maritimo" team2="nacional" closed="0" res="tbd">
-      <odd value="1.40" />
-      <odd value="1.5" />
       <odd value="4" />
+      <odd value="1.5" />
+      <odd value="1.5" />
     </jogo>
   </jogos>
 </ZEBET>
