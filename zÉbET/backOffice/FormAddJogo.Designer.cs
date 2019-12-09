@@ -62,24 +62,57 @@
             // 
             // numE1
             // 
+            this.numE1.DecimalPlaces = 2;
             this.numE1.Location = new System.Drawing.Point(159, 89);
+            this.numE1.Minimum = new decimal(new int[] {
+            101,
+            0,
+            0,
+            131072});
             this.numE1.Name = "numE1";
             this.numE1.Size = new System.Drawing.Size(59, 20);
             this.numE1.TabIndex = 2;
+            this.numE1.Value = new decimal(new int[] {
+            101,
+            0,
+            0,
+            131072});
             // 
             // numE2
             // 
+            this.numE2.DecimalPlaces = 2;
             this.numE2.Location = new System.Drawing.Point(289, 90);
+            this.numE2.Minimum = new decimal(new int[] {
+            101,
+            0,
+            0,
+            131072});
             this.numE2.Name = "numE2";
             this.numE2.Size = new System.Drawing.Size(59, 20);
             this.numE2.TabIndex = 3;
+            this.numE2.Value = new decimal(new int[] {
+            101,
+            0,
+            0,
+            131072});
             // 
             // numX
             // 
+            this.numX.DecimalPlaces = 2;
             this.numX.Location = new System.Drawing.Point(224, 89);
+            this.numX.Minimum = new decimal(new int[] {
+            101,
+            0,
+            0,
+            131072});
             this.numX.Name = "numX";
             this.numX.Size = new System.Drawing.Size(59, 20);
             this.numX.TabIndex = 4;
+            this.numX.Value = new decimal(new int[] {
+            101,
+            0,
+            0,
+            131072});
             // 
             // txtLiga
             // 

@@ -12,10 +12,12 @@ namespace backOffice
 {
     public partial class FormAddJogo : Form
     {
-        public Jogo jogo;   
-        public FormAddJogo()
+        public Jogo jogo;
+        int idJogo;   
+        public FormAddJogo(int id)
         {
             InitializeComponent();
+            idJogo = id;
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -39,7 +41,8 @@ namespace backOffice
             }
             else
             {
-                jogo = new Jogo(cbbModalidade.Text, txtLiga.Text, txtE1.Text, txtE2.Text, Convert.ToDouble(numE1.Value), Convert.ToDouble(numX.Value), Convert.ToDouble(numE2.Value));
+                this.DialogResult = DialogResult.OK;
+                jogo = new Jogo(idJogo, cbbModalidade.Text, txtLiga.Text, txtE1.Text, txtE2.Text,new double[]{ Convert.ToDouble(numE1.Value), Convert.ToDouble(numX.Value), Convert.ToDouble(numE2.Value) });
                 this.Close();
             }
         }
@@ -47,19 +50,20 @@ namespace backOffice
 
     public class Jogo
     {
+        public int idJogo;
         public string modalidade,liga,team1, team2;
         public double[] odds;
 
-        public Jogo(string m, string l, string t1, string t2, double odd1, double oddX, double odd2)
+        
+        public Jogo(int id, string m, string l, string t1, string t2, double[] od)
         {
+            idJogo = id;
             modalidade = m;
             liga = l;
             team1 = t1;
             team2 = t2;
             odds = new double[3];
-            odds[0] = odd1;
-            odds[1] = oddX;
-            odds[2] = odd2;
+            odds = od;
         }
     }
 }

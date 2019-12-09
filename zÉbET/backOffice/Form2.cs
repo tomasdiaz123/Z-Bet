@@ -33,7 +33,7 @@ namespace backOffice
             ListViewItem lvi;
             ListViewItem.ListViewSubItem lvsi;
             
-
+            // preencher listview dos users
             foreach (XmlNode node in doc.DocumentElement.SelectSingleNode("Users"))
             {
                 if (node.Name == "user")
@@ -55,6 +55,21 @@ namespace backOffice
 
                     lsvUsers.Items.Add(lvi);
                 }
+            }
+
+            foreach (XmlNode node in doc.DocumentElement.SelectSingleNode("jogos"))
+            {
+                
+                int idJogo = Convert.ToInt32(node.Attributes[0].Value);
+                string modalidade = node.Attributes[1].Value;
+                string liga = node.Attributes[2].Value;
+                string e1 = node.Attributes[3].Value;
+                string e2 = node.Attributes[4].Value;
+
+                double[] odds = { Convert.ToDouble(node.ChildNodes[0].Attributes[0].Value),
+                    Convert.ToDouble(node.ChildNodes[1].Attributes[0].Value),
+                    Convert.ToDouble(node.ChildNodes[2].Attributes[0].Value) };
+                lsvAddJogo(new Jogo(idJogo, modalidade, liga, e1, e2, odds));
             }
         }
 
@@ -170,14 +185,83 @@ namespace backOffice
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
-            FormAddJogo formAddGame = new FormAddJogo();
 
-            formAddGame.ShowDialog();
+            int id = lsvJogos.Items.Count;
+           
+            FormAddJogo formAddGame = new FormAddJogo(id);
 
-            formAddGame.jogo.
+            
+
+            if (formAddGame.ShowDialog() == DialogResult.OK)
+            {
+                lsvAddJogo(formAddGame.jogo);
+            }
         }
 
-        private lsvAddJogo (Jogo jogo)
+        private void lsvAddJogo (Jogo jogo)
+        {
+            //id    modalidade  liga    equipa1 odd1 oddX odd2 equipa2
+            ListViewItem lvi = new ListViewItem();
+
+            lvi.Text = jogo.idJogo.ToString();
+
+            ListViewItem.ListViewSubItem lvsi = new ListViewItem.ListViewSubItem();
+
+            lvsi.Text = jogo.modalidade;
+            lvi.SubItems.Add(lvsi);
+
+            lvsi = new ListViewItem.ListViewSubItem();
+
+            lvsi.Text = jogo.liga;
+            lvi.SubItems.Add(lvsi);
+
+            lvsi = new ListViewItem.ListViewSubItem();
+
+            lvsi.Text = jogo.team1;
+            lvi.SubItems.Add(lvsi);
+
+            lvsi = new ListViewItem.ListViewSubItem();
+
+            lvsi.Text = jogo.odds[0].ToString();
+            lvi.SubItems.Add(lvsi);
+
+            lvsi = new ListViewItem.ListViewSubItem();
+
+            lvsi.Text = jogo.odds[1].ToString();
+            lvi.SubItems.Add(lvsi);
+
+            lvsi = new ListViewItem.ListViewSubItem();
+
+            lvsi.Text = jogo.odds[2].ToString();
+            lvi.SubItems.Add(lvsi);
+
+            lvsi = new ListViewItem.ListViewSubItem();
+
+            lvsi.Text = jogo.team2;
+            lvi.SubItems.Add(lvsi);
+
+            lsvJogos.Items.Add(lvi);
+
+        }
+
+        private void lsvJogos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lsvJogos.SelectedIndices.Count!=0)
+            {
+                txtTeam1.Text = lsvJogos.SelectedItems[0].SubItems[3].Text;
+                txtTeam2.Text = lsvJogos.SelectedItems[0].SubItems[7].Text;
+                numOdd1.Value = Convert.ToDecimal(lsvJogos.SelectedItems[0].SubItems[4].Text);
+                numOddX.Value = Convert.ToDecimal(lsvJogos.SelectedItems[0].SubItems[5].Text);
+                numOdd2.Value = Convert.ToDecimal(lsvJogos.SelectedItems[0].SubItems[6].Text);
+            }
+        }
+
+        private void btnResult_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSend2_Click(object sender, EventArgs e)
         {
 
         }
