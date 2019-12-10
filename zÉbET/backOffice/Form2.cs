@@ -204,7 +204,7 @@ namespace backOffice
             ListViewItem lvi = new ListViewItem();
 
             lvi.Text = jogo.idJogo.ToString();
-
+            lvi.Tag = "00";
             ListViewItem.ListViewSubItem lvsi = new ListViewItem.ListViewSubItem();
 
             lvsi.Text = jogo.modalidade;
@@ -256,6 +256,10 @@ namespace backOffice
                 numOdd1.Value = Convert.ToDecimal(lsvJogos.SelectedItems[0].SubItems[4].Text);
                 numOddX.Value = Convert.ToDecimal(lsvJogos.SelectedItems[0].SubItems[5].Text);
                 numOdd2.Value = Convert.ToDecimal(lsvJogos.SelectedItems[0].SubItems[6].Text);
+                if (lsvJogos.SelectedItems[0].Tag.ToString().Substring(0, 1) == "1")
+                    btnCloseBets.Enabled = false;
+                else
+                    btnCloseBets.Enabled = true;
             }
             else
             {
@@ -266,10 +270,39 @@ namespace backOffice
                 numOdd2.Enabled = false;
             }
         }
-
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            if (lsvJogos.SelectedIndices.Count != 0)
+            {
+                lsvJogos.SelectedItems[0].Tag = "10";
+                btnCloseBets.Enabled = false;
+            }
+        }
         private void btnResult_Click(object sender, EventArgs e)
         {
+            string res = lsvJogos.SelectedItems[0].Tag.ToString().Substring(1, 1);
+            if (res != "0")
+            {
+                string msg = "";
+                if (res == "1")
+                    msg = "Vitoria do " + txtTeam1.Text;
+                if (res == "X")
+                    msg = "Empate";
+                if (res == "2")
+                    msg = "Vitoria do " + txtTeam2.Text;
 
+                MessageBox.Show(msg, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (lsvJogos.SelectedIndices.Count != 0 && btnCloseBets.Enabled == false )
+            {
+                Resultado formResult = new Resultado(txtTeam1.Text,txtTeam2.Text);
+
+                if (formResult.ShowDialog() == DialogResult.OK)
+                {
+                    lsvJogos.SelectedItems[0].Tag = "1" + formResult.Value;
+                }
+            }
         }
 
         private void btnSend2_Click(object sender, EventArgs e)
@@ -281,5 +314,7 @@ namespace backOffice
                 lsvJogos.SelectedItems[0].SubItems[6].Text = numOdd2.Value.ToString();
             }
         }
+
+       
     }
 }

@@ -45,7 +45,7 @@
             this.chSaldo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tpJogos = new System.Windows.Forms.TabPage();
             this.btnResult = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.btnCloseBets = new System.Windows.Forms.Button();
             this.btnNewGame = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -226,7 +226,7 @@
             // tpJogos
             // 
             this.tpJogos.Controls.Add(this.btnResult);
-            this.tpJogos.Controls.Add(this.btnClose);
+            this.tpJogos.Controls.Add(this.btnCloseBets);
             this.tpJogos.Controls.Add(this.btnNewGame);
             this.tpJogos.Controls.Add(this.label5);
             this.tpJogos.Controls.Add(this.label4);
@@ -257,14 +257,15 @@
             this.btnResult.UseVisualStyleBackColor = true;
             this.btnResult.Click += new System.EventHandler(this.btnResult_Click);
             // 
-            // btnClose
+            // btnCloseBets
             // 
-            this.btnClose.Location = new System.Drawing.Point(15, 166);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 36);
-            this.btnClose.TabIndex = 12;
-            this.btnClose.Text = "Fechar Apostas";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnCloseBets.Location = new System.Drawing.Point(15, 166);
+            this.btnCloseBets.Name = "btnCloseBets";
+            this.btnCloseBets.Size = new System.Drawing.Size(75, 36);
+            this.btnCloseBets.TabIndex = 12;
+            this.btnCloseBets.Text = "Fechar Apostas";
+            this.btnCloseBets.UseVisualStyleBackColor = true;
+            this.btnCloseBets.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnNewGame
             // 
@@ -525,7 +526,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnResult;
-        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnCloseBets;
         private System.Windows.Forms.Button btnNewGame;
         private System.Windows.Forms.ColumnHeader chId;
         private System.Windows.Forms.ColumnHeader chModalidade;
