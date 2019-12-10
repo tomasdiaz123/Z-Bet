@@ -52,12 +52,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnSave2 = new System.Windows.Forms.Button();
             this.btnSend2 = new System.Windows.Forms.Button();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.numOdd2 = new System.Windows.Forms.NumericUpDown();
+            this.numOddX = new System.Windows.Forms.NumericUpDown();
+            this.numOdd1 = new System.Windows.Forms.NumericUpDown();
+            this.txtTeam2 = new System.Windows.Forms.TextBox();
+            this.txtTeam1 = new System.Windows.Forms.TextBox();
+            this.lsvJogos = new System.Windows.Forms.ListView();
             this.chId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chModalidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chLiga = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -70,9 +70,9 @@
             this.tpUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSaldo)).BeginInit();
             this.tpJogos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOdd2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOddX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOdd1)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcTabs
@@ -82,7 +82,7 @@
             this.tbcTabs.Location = new System.Drawing.Point(12, 20);
             this.tbcTabs.Name = "tbcTabs";
             this.tbcTabs.SelectedIndex = 0;
-            this.tbcTabs.Size = new System.Drawing.Size(724, 440);
+            this.tbcTabs.Size = new System.Drawing.Size(828, 440);
             this.tbcTabs.TabIndex = 0;
             // 
             // tpUsers
@@ -100,7 +100,7 @@
             this.tpUsers.Location = new System.Drawing.Point(4, 22);
             this.tpUsers.Name = "tpUsers";
             this.tpUsers.Padding = new System.Windows.Forms.Padding(3);
-            this.tpUsers.Size = new System.Drawing.Size(716, 414);
+            this.tpUsers.Size = new System.Drawing.Size(820, 414);
             this.tpUsers.TabIndex = 0;
             this.tpUsers.Text = "Users";
             this.tpUsers.UseVisualStyleBackColor = true;
@@ -203,7 +203,7 @@
             this.lsvUsers.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lsvUsers.Location = new System.Drawing.Point(320, 16);
             this.lsvUsers.Name = "lsvUsers";
-            this.lsvUsers.Size = new System.Drawing.Size(390, 392);
+            this.lsvUsers.Size = new System.Drawing.Size(494, 392);
             this.lsvUsers.TabIndex = 0;
             this.lsvUsers.UseCompatibleStateImageBehavior = false;
             this.lsvUsers.View = System.Windows.Forms.View.Details;
@@ -212,12 +212,12 @@
             // chUsername
             // 
             this.chUsername.Text = "Username";
-            this.chUsername.Width = 275;
+            this.chUsername.Width = 366;
             // 
             // chNivel
             // 
             this.chNivel.Text = "Nível";
-            this.chNivel.Width = 50;
+            this.chNivel.Width = 61;
             // 
             // chSaldo
             // 
@@ -233,16 +233,16 @@
             this.tpJogos.Controls.Add(this.label2);
             this.tpJogos.Controls.Add(this.btnSave2);
             this.tpJogos.Controls.Add(this.btnSend2);
-            this.tpJogos.Controls.Add(this.numericUpDown3);
-            this.tpJogos.Controls.Add(this.numericUpDown2);
-            this.tpJogos.Controls.Add(this.numericUpDown1);
-            this.tpJogos.Controls.Add(this.textBox2);
-            this.tpJogos.Controls.Add(this.textBox1);
-            this.tpJogos.Controls.Add(this.listView1);
+            this.tpJogos.Controls.Add(this.numOdd2);
+            this.tpJogos.Controls.Add(this.numOddX);
+            this.tpJogos.Controls.Add(this.numOdd1);
+            this.tpJogos.Controls.Add(this.txtTeam2);
+            this.tpJogos.Controls.Add(this.txtTeam1);
+            this.tpJogos.Controls.Add(this.lsvJogos);
             this.tpJogos.Location = new System.Drawing.Point(4, 22);
             this.tpJogos.Name = "tpJogos";
             this.tpJogos.Padding = new System.Windows.Forms.Padding(3);
-            this.tpJogos.Size = new System.Drawing.Size(716, 414);
+            this.tpJogos.Size = new System.Drawing.Size(820, 414);
             this.tpJogos.TabIndex = 1;
             this.tpJogos.Text = "Jogos";
             this.tpJogos.UseVisualStyleBackColor = true;
@@ -255,6 +255,7 @@
             this.btnResult.TabIndex = 13;
             this.btnResult.Text = "Resultado";
             this.btnResult.UseVisualStyleBackColor = true;
+            this.btnResult.Click += new System.EventHandler(this.btnResult_Click);
             // 
             // btnClose
             // 
@@ -319,62 +320,99 @@
             this.btnSend2.TabIndex = 6;
             this.btnSend2.Text = ">>";
             this.btnSend2.UseVisualStyleBackColor = true;
+            this.btnSend2.Click += new System.EventHandler(this.btnSend2_Click);
             // 
-            // numericUpDown3
+            // numOdd2
             // 
-            this.numericUpDown3.Increment = new decimal(new int[] {
+            this.numOdd2.DecimalPlaces = 2;
+            this.numOdd2.Enabled = false;
+            this.numOdd2.Increment = new decimal(new int[] {
             5,
             0,
             0,
             131072});
-            this.numericUpDown3.Location = new System.Drawing.Point(188, 124);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(85, 20);
-            this.numericUpDown3.TabIndex = 5;
+            this.numOdd2.Location = new System.Drawing.Point(188, 124);
+            this.numOdd2.Minimum = new decimal(new int[] {
+            101,
+            0,
+            0,
+            131072});
+            this.numOdd2.Name = "numOdd2";
+            this.numOdd2.Size = new System.Drawing.Size(85, 20);
+            this.numOdd2.TabIndex = 5;
+            this.numOdd2.Value = new decimal(new int[] {
+            101,
+            0,
+            0,
+            131072});
             // 
-            // numericUpDown2
+            // numOddX
             // 
-            this.numericUpDown2.Increment = new decimal(new int[] {
+            this.numOddX.DecimalPlaces = 2;
+            this.numOddX.Enabled = false;
+            this.numOddX.Increment = new decimal(new int[] {
             5,
             0,
             0,
             131072});
-            this.numericUpDown2.Location = new System.Drawing.Point(188, 85);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(85, 20);
-            this.numericUpDown2.TabIndex = 4;
+            this.numOddX.Location = new System.Drawing.Point(188, 85);
+            this.numOddX.Minimum = new decimal(new int[] {
+            101,
+            0,
+            0,
+            131072});
+            this.numOddX.Name = "numOddX";
+            this.numOddX.Size = new System.Drawing.Size(85, 20);
+            this.numOddX.TabIndex = 4;
+            this.numOddX.Value = new decimal(new int[] {
+            101,
+            0,
+            0,
+            131072});
             // 
-            // numericUpDown1
+            // numOdd1
             // 
-            this.numericUpDown1.Increment = new decimal(new int[] {
+            this.numOdd1.DecimalPlaces = 2;
+            this.numOdd1.Enabled = false;
+            this.numOdd1.Increment = new decimal(new int[] {
             5,
             0,
             0,
             131072});
-            this.numericUpDown1.Location = new System.Drawing.Point(188, 46);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(85, 20);
-            this.numericUpDown1.TabIndex = 3;
+            this.numOdd1.Location = new System.Drawing.Point(188, 46);
+            this.numOdd1.Minimum = new decimal(new int[] {
+            101,
+            0,
+            0,
+            131072});
+            this.numOdd1.Name = "numOdd1";
+            this.numOdd1.Size = new System.Drawing.Size(85, 20);
+            this.numOdd1.TabIndex = 3;
+            this.numOdd1.Value = new decimal(new int[] {
+            101,
+            0,
+            0,
+            131072});
             // 
-            // textBox2
+            // txtTeam2
             // 
-            this.textBox2.Location = new System.Drawing.Point(15, 124);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(167, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtTeam2.Location = new System.Drawing.Point(15, 124);
+            this.txtTeam2.Name = "txtTeam2";
+            this.txtTeam2.ReadOnly = true;
+            this.txtTeam2.Size = new System.Drawing.Size(167, 20);
+            this.txtTeam2.TabIndex = 2;
             // 
-            // textBox1
+            // txtTeam1
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(167, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtTeam1.Location = new System.Drawing.Point(15, 45);
+            this.txtTeam1.Name = "txtTeam1";
+            this.txtTeam1.ReadOnly = true;
+            this.txtTeam1.Size = new System.Drawing.Size(167, 20);
+            this.txtTeam1.TabIndex = 1;
             // 
-            // listView1
+            // lsvJogos
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lsvJogos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chId,
             this.chModalidade,
             this.chLiga,
@@ -383,12 +421,13 @@
             this.chOddX,
             this.chOdd2,
             this.chTeam2});
-            this.listView1.Location = new System.Drawing.Point(279, 6);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(431, 402);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lsvJogos.Location = new System.Drawing.Point(279, 6);
+            this.lsvJogos.Name = "lsvJogos";
+            this.lsvJogos.Size = new System.Drawing.Size(535, 402);
+            this.lsvJogos.TabIndex = 0;
+            this.lsvJogos.UseCompatibleStateImageBehavior = false;
+            this.lsvJogos.View = System.Windows.Forms.View.Details;
+            this.lsvJogos.SelectedIndexChanged += new System.EventHandler(this.lsvJogos_SelectedIndexChanged);
             // 
             // chId
             // 
@@ -398,46 +437,46 @@
             // chModalidade
             // 
             this.chModalidade.Text = "Modalidade";
-            this.chModalidade.Width = 78;
+            this.chModalidade.Width = 92;
             // 
             // chLiga
             // 
             this.chLiga.Text = "Liga";
-            this.chLiga.Width = 63;
+            this.chLiga.Width = 92;
             // 
             // chTeam1
             // 
             this.chTeam1.Text = "Equipa1";
-            this.chTeam1.Width = 69;
+            this.chTeam1.Width = 89;
             // 
             // chOdd1
             // 
             this.chOdd1.Text = "1";
             this.chOdd1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.chOdd1.Width = 30;
+            this.chOdd1.Width = 40;
             // 
             // chOddX
             // 
             this.chOddX.Text = "X";
             this.chOddX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.chOddX.Width = 30;
+            this.chOddX.Width = 41;
             // 
             // chOdd2
             // 
             this.chOdd2.Text = "2";
             this.chOdd2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.chOdd2.Width = 30;
+            this.chOdd2.Width = 39;
             // 
             // chTeam2
             // 
             this.chTeam2.Text = "Equipa2";
-            this.chTeam2.Width = 77;
+            this.chTeam2.Width = 88;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(741, 472);
+            this.ClientSize = new System.Drawing.Size(852, 472);
             this.Controls.Add(this.tbcTabs);
             this.Name = "Form2";
             this.Text = "Form2";
@@ -449,9 +488,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numSaldo)).EndInit();
             this.tpJogos.ResumeLayout(false);
             this.tpJogos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOdd2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOddX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOdd1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -476,12 +515,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSave2;
         private System.Windows.Forms.Button btnSend2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.NumericUpDown numOdd2;
+        private System.Windows.Forms.NumericUpDown numOddX;
+        private System.Windows.Forms.NumericUpDown numOdd1;
+        private System.Windows.Forms.TextBox txtTeam2;
+        private System.Windows.Forms.TextBox txtTeam1;
+        private System.Windows.Forms.ListView lsvJogos;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
