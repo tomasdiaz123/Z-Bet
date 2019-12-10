@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Apostas.aspx.cs" Inherits="zÉbET.ZEBET_verFinal.Main.DESPORTOS.images.baseball" %>
+﻿w<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Apostas.aspx.cs" Inherits="zÉbET.ZEBET_verFinal.Main.DESPORTOS.images.baseball" %>
 
 <!DOCTYPE html>
 
@@ -7,7 +7,7 @@
   <%--  <%Session["User"] = Request.Form["txt_UserL"]; 
         Session["Saldo"] = %>--%>
 	<head>
-		<title>Baseball|ZéBet</title>
+		<title>Apostas|ZéBet</title>
 		<meta charset="us-ascii" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/cssFutebol.css" />
@@ -50,26 +50,30 @@
 			<div id="main">
                 <br />
                 <h2><p style="text-align:center">BOLETIM</p></h2>
+               Hoquei<asp:RadioButton ID="rdbHoquei" runat="server" Groupname="desporto" OnCheckedChanged="rdbHoquei_CheckedChanged"/>
+           Futebol<asp:RadioButton ID="rdbFutebol" Groupname="desporto" runat="server" OnCheckedChanged="rdbFutebol_CheckedChanged"/>
+           Basket<asp:RadioButton ID="rdbBasket" Groupname="desporto" runat="server" OnCheckedChanged="rdbBasket_CheckedChanged" />
+           Volei<asp:RadioButton ID="rdbVolei" Groupname="desporto" runat="server" OnCheckedChanged="rdbVolei_CheckedChanged" />
+           Snooker<asp:RadioButton ID="rdbSnooker" Groupname="desporto" runat="server" OnCheckedChanged="rdbSnooker_CheckedChanged"/>
+           Basebol<asp:RadioButton ID="rdbBasebol" Groupname="desporto" runat="server" OnCheckedChanged="Basebol_CheckedChanged" />
                 <hr />
-                     Hoquei<asp:RadioButton ID="rdbHoquei" runat="server"  Visible="true" height="20px" width="20px" Checked="true" />Futebol<asp:RadioButton ID="rdbFutebol" runat="server" />Basket<asp:RadioButton ID="rdbBasket" runat="server" />Volei<asp:RadioButton ID="rdbVolei" runat="server" />Snooker<asp:RadioButton ID="rdbSnooker" runat="server" />Volei<asp:RadioButton ID="Basebol" runat="server" />
+         <h3> Liga PortuguesaPortuguesa</h3>
                 <hr />
-               <h3> Liga Portuguesa</h3>
-                <hr />
-                <b><asp:Label ID="Label1" runat="server" Text="Benfica[2.15] X[3.0] Porto[2.5]"></asp:Label><br /></b>
-                <asp:Label ID="Label2" runat="server" Text="Aves[3.15] X[3.0] Sporting[1.55]"></asp:Label><br />
-                <asp:Label ID="Label3" runat="server" Text="Braga[1.2]x[3.15] Famalicão[2.15]"></asp:Label><br />
+                <b><asp:Label ID="Label1" runat="server" Text="Benfica[2.15] X[3.0] Porto[2.5]" Visible="False"></asp:Label><br /></b>
+                <asp:Label ID="Label2" runat="server" Text="Aves[3.15] X[3.0] Sporting[1.55]" Visible="False"></asp:Label><br />
+                <asp:Label ID="Label3" runat="server" Text="Braga[1.2]x[3.15] Famalicão[2.15]" Visible="False"></asp:Label><br />
                 <hr />
                 <h3>Liga Fracesa</h3>
                 <hr />
-                <b><asp:Label ID="Label4" runat="server" Text="PSG[2.15] X[3.0] LYON[2.5]"></asp:Label><br /></b>
-                <asp:Label ID="Label5" runat="server" Text="PSG[2.15] X[3.0] LYON[2.5]"></asp:Label><br />
-                <asp:Label ID="Label6" runat="server" Text="lille[1.2] x[3.15] Nimes[2.15]"></asp:Label><br />
+                <b><asp:Label ID="Label4" runat="server" Text="PSG[2.15] X[3.0] LYON[2.5]" Visible="False"></asp:Label><br /></b>
+                <asp:Label ID="Label5" runat="server" Text="PSG[2.15] X[3.0] LYON[2.5]" Visible="False"></asp:Label><br />
+                <asp:Label ID="Label6" runat="server" Text="lille[1.2] x[3.15] Nimes[2.15]" Visible="False"></asp:Label><br />
                 <hr />
                 <h3>Liga Inglesa</h3>
                 <hr />
-                <b><asp:Label ID="Label7" runat="server" Text="Wolves[2.15] X[3.0] Leicester[2.5]"></asp:Label><br /></b>
-                <asp:Label ID="Label8" runat="server" Text="Mun.City[2.15] X[3.0] Mun.United[2.5]"></asp:Label><br />
-                <asp:Label ID="Label9" runat="server" Text="Arsenal[1.2] x[3.15] Newcastle[2.15]"></asp:Label><br />
+                <b><asp:Label ID="Label7" runat="server" Text="Wolves[2.15] X[3.0] Leicester[2.5]" Visible="False"></asp:Label><br /></b>
+                <asp:Label ID="Label8" runat="server" Text="Mun.City[2.15] X[3.0] Mun.United[2.5]" Visible="False"></asp:Label><br />
+                <asp:Label ID="Label9" runat="server" Text="Arsenal[1.2] x[3.15] Newcastle[2.15]" Visible="False"></asp:Label><br />
             </div>
 		<!-- Footer -->
 			<div id="footer">
