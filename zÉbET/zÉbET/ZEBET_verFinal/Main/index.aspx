@@ -14,7 +14,7 @@
         <div id="header">
 
             <div class="top">
-
+                <form runat="server" id="registerform">
                 <!-- Logo -->
                 <div id="logo">
 
@@ -36,7 +36,8 @@
                 <p>
                     <br /><br /><br /><br /><br />
                     <p style="text-align:right"><asp:Label ID="Label5" runat="server" Text=""></asp:Label><br />
-                         <asp:Label ID="Label6" runat="server" Text="" CssClass="left_align"></asp:Label></p>
+                             <asp:Label name="Saldo" ID="Label6" runat="server" Text="" CssClass="left_align"></asp:Label>
+                    </p>
                 </p>
 
                 <!-- Social Icons -->
@@ -47,8 +48,8 @@
                     <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
                     <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
                 </ul>
-
-            </div>
+                <asp:Button ID="btnLogout" runat="server"  Text="X" Visible="False" Height="50px" Width="50px" style="left:75%;bottom: 10%" CssClass="label" OnClick="btnLogout_Click1" />
+            </div>  
 
         </div>
 
@@ -170,7 +171,7 @@
                         <p>
                             Abrir uma conta no ZÉ.BET é gratuito e dá-lhe acesso a todo o site.
                             <br />
-                            Aceda ao formulário de registo no painel esquerdo e
+                            Aceda ao  ulário de registo no painel esquerdo e
                             clique em “Regista-te!”.
                         </p>
                     </div>
@@ -234,7 +235,7 @@
                             cobrimos as ofertas básicas de apostas mas também muito mais.
                             <br />
                             Os principais tipos de aposta em ZÉ.BET
-                            (Nota: A informação a seguir foi retirada do site de apostas Betclic.pt):
+                            (Nota: A in ação a seguir foi retirada do site de apostas Betclic.pt):
                             <br />
                             - A aposta "Simples": como o nome sugere,
                             esta aposta consiste em apostar em um único evento /
@@ -267,18 +268,16 @@
                         orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.
                     </p>
 
-                    <form method="post" action="#">
                         <div class="row">
-                            <div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-                            <div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
+                            <div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" style="width:600px"   /></div>
+                            <div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" style="width:650px" /></div>
                             <div class="col-12">
-                                <textarea name="message" placeholder="Message"></textarea>
+                                <textarea name="message" placeholder="Message" style="width:1270px; height:350px"></textarea>
                             </div>
                             <div class="col-12">
-                                <button type='submit' class="button-bottom">Enviar</button>
+                                <button type='submit' class="button-bottom" style="width:900px">Enviar</button>
                             </div>
                         </div>
-                    </form>
 
                 </div>
             </section>
@@ -287,31 +286,33 @@
 
             <!-- REGISTER -->
             <section id="register" class="five">
-                <form id="registerform" runat="server">
+                <div id="register ">
 
-                     <asp:Label font-size="70px" ID="lblRegista" runat="server" Text="Regista-te!"></asp:Label><br /><br />
-                     Username<asp:TextBox ID="txtUtilizador" runat="server" ></asp:TextBox>
+                     <asp:Label font-size="70px" ID="lblRegista" runat="server" Text="Regista-te! "></asp:Label><br /><br />
+                     Username<br /><asp:TextBox ID="txtUtilizador" runat="server" name="txtUser" Width="650"></asp:TextBox><br />
                     <asp:Label ID="lblUtilizador" runat="server" Text="" Visible="False" ForeColor="Red"></asp:Label>  <br />
-                     Password<asp:TextBox ID="txtPassword" TextMode= "Password" runat="server" ></asp:TextBox><br />
-                    <label for='form-switch'><asp:Label ID="errorLabel" runat="server" Text="Label" ForeColor="#CC0000" Visible="False"></asp:Label><br />
+                     Password<br /><asp:TextBox name="txt_Password" ID="txtPassword" TextMode= "Password" runat="server" Width="650"></asp:TextBox><br />
+                    <label for=' -switch'><asp:Label ID="errorLabel" runat="server" Text="Label" ForeColor="#CC0000" Visible="False"></asp:Label><br />
                     </label>
-                    Confirma a Password<asp:TextBox ID="txtRePassword" TextMode= "Password" runat="server" ></asp:TextBox>   
+                    Confirma a Password<br /><asp:TextBox  name="txt_RePassword"  ID="txtRePassword" TextMode= "Password" runat="server" Width="650"></asp:TextBox>   <br />
                     <asp:Label ID="lblMatchPass" runat="server" Text="" Visible="False" ForeColor="Red"></asp:Label>        <br />         
                     <br />
             <%--        <asp:TextBox ID="txtUtilizadorLogin" runat="server" ></asp:TextBox>
                     <asp:TextBox ID="txtPasswordLogin" TextMode= "Password" runat="server" ></asp:TextBox> 
                    <asp:Button ID="BtnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
 
-                    <label for='form-switch'><span>Regista-te</span></label>--%>
-                    <asp:Button ID="btnRegista" runat="server" Text="Regista-te" OnClick="btnRegista_Click" /><br /><br /><br />
+                    <label for=' -switch'><span>Regista-te</span></label>--%>
+                    <asp:Button ID="btnRegista" runat="server" Text="Regista-te" OnClick="btnRegista_Click" Width="650" /><br /><br /><br />
                    <%-- Login --%>  
-                    <asp:Label font-size="70px" ID="Label1" runat="server" Text="Login"></asp:Label><br /><br />    
-                     Username<asp:TextBox ID="txtUsernameL" runat="server" ></asp:TextBox>
-                     Password<asp:TextBox ID="txtPassowordL" TextMode= "Password" runat="server" ></asp:TextBox>
+                    <asp:Label font-size="70px" ID="Label1" runat="server" Text="Login" ></asp:Label><br /><br />    
+                     Username<br /><asp:TextBox  name="txt_UserL" ID="txtUsernameL" runat="server" Width="650"></asp:TextBox> <br />
+                     Password<br /><asp:TextBox  name="txtPassowordL" ID="txtPassowordL" TextMode= "Password" runat="server" Width="650"></asp:TextBox><br />
                     <asp:Label ID="Label4" runat="server" Text="" Visible="False" ForeColor="Red"></asp:Label>   <br />    <br />
-                    <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click"  /><br /><br /><br />
-
-                    </form>
+                    <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click"  Width="650" /><br /><br /><br /><br /><br /><br />
+                    <nav>
+                    
+                    </nav>
+                    </div>
             </section>
 
         </div>
@@ -321,12 +322,12 @@
             <!-- Copyright -->
             <ul class="copyright">
                 <li>&copy; Untitled. All rights reserved.</li>
-                <li>Design: HTML5 UP | Gonçalo Vidal | Tomás Dias | TGPSI17 01</a></li>
+                <li>Design: HTML5 UP | Gonçalo Vidal | Tomás Dias | TGPSI17 01</li>
             </ul>
 
         </div>
 
-
+        </form>
 
         <!-- Scripts -->
         <script src="assets/js/jquery.min.js"></script>
@@ -336,6 +337,6 @@
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
-
+        </ >
     </body>
 </html>

@@ -28,7 +28,7 @@ namespace zÉbET
             }
 
         }
-
+         
         protected void btnRegista_Click(object sender, EventArgs e)
         {
             lblMatchPass.ForeColor = System.Drawing.Color.Red;
@@ -96,7 +96,6 @@ namespace zÉbET
                 }
                 
             }
-
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -114,6 +113,8 @@ namespace zÉbET
                 Label4.Text="Sucesso";
                 Label5.Text = "<left>Olá " + txtUsernameL.Text+"</left>";
                 Label6.Text = "<left>" + "O seu saldo é: "+ GetSaldo(txtUsernameL.Text)+"€" ;
+                btnLogout.Text = "Logout";
+                btnLogout.Visible = true;
             }
         }
         private string ValidatePassword(string password)
@@ -201,5 +202,11 @@ namespace zÉbET
             return "0";
         }
 
+        protected void btnLogout_Click1(object sender, EventArgs e)
+        {
+            Label5.Visible = false;
+            Label6.Visible = false;
+            btnLogout.Visible = false;
+        }
     }
 }

@@ -9,9 +9,6 @@ namespace zÉbET.ZEBET_verFinal.Main.DESPORTOS.images
 {
     public partial class baseball : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
