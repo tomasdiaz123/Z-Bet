@@ -325,6 +325,7 @@
             // numOdd2
             // 
             this.numOdd2.DecimalPlaces = 2;
+            this.numOdd2.Enabled = false;
             this.numOdd2.Increment = new decimal(new int[] {
             5,
             0,
@@ -348,6 +349,7 @@
             // numOddX
             // 
             this.numOddX.DecimalPlaces = 2;
+            this.numOddX.Enabled = false;
             this.numOddX.Increment = new decimal(new int[] {
             5,
             0,
@@ -371,6 +373,7 @@
             // numOdd1
             // 
             this.numOdd1.DecimalPlaces = 2;
+            this.numOdd1.Enabled = false;
             this.numOdd1.Increment = new decimal(new int[] {
             5,
             0,

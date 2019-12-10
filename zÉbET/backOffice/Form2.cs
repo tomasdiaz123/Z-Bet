@@ -248,11 +248,22 @@ namespace backOffice
         {
             if (lsvJogos.SelectedIndices.Count!=0)
             {
+                numOdd1.Enabled = true;
+                numOddX.Enabled = true;
+                numOdd2.Enabled = true;
                 txtTeam1.Text = lsvJogos.SelectedItems[0].SubItems[3].Text;
                 txtTeam2.Text = lsvJogos.SelectedItems[0].SubItems[7].Text;
                 numOdd1.Value = Convert.ToDecimal(lsvJogos.SelectedItems[0].SubItems[4].Text);
                 numOddX.Value = Convert.ToDecimal(lsvJogos.SelectedItems[0].SubItems[5].Text);
                 numOdd2.Value = Convert.ToDecimal(lsvJogos.SelectedItems[0].SubItems[6].Text);
+            }
+            else
+            {
+                txtTeam1.Text = "";
+                txtTeam2.Text = "";
+                numOdd1.Enabled = false;
+                numOddX.Enabled = false;
+                numOdd2.Enabled = false;
             }
         }
 
@@ -263,7 +274,12 @@ namespace backOffice
 
         private void btnSend2_Click(object sender, EventArgs e)
         {
-
+            if (lsvJogos.SelectedIndices.Count != 0)
+            {
+                lsvJogos.SelectedItems[0].SubItems[4].Text = numOdd1.Value.ToString();
+                lsvJogos.SelectedItems[0].SubItems[5].Text = numOddX.Value.ToString();
+                lsvJogos.SelectedItems[0].SubItems[6].Text = numOdd2.Value.ToString();
+            }
         }
     }
 }
