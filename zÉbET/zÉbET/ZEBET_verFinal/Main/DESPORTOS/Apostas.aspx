@@ -6,7 +6,8 @@
     <form id="formA" runat="server">
   <%--  <%Session["User"] = Request.Form["txt_UserL"]; 
         Session["Saldo"] = %>--%>
-	<head>Apostas|ZéBet</title>
+	<head>
+Apostas|ZéBet</title>
 		<meta charset="us-ascii" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/cssFutebol.css" />
