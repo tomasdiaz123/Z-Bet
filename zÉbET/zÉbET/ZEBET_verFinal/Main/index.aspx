@@ -62,7 +62,7 @@
 
                     <header id="wtf">
                         <h2 class="alt"><strong>Aposta na Desportiva.</strong></h2>
-                        <a href="#portfolio" class="button scrolly button-top"><strong>Quero Apostar!</strong></a>
+                        <a  href="DESPORTOS/Apostas.aspx" class="button scrolly button-top"><strong>Quero Apostar!</strong></a>
 
                     </header>
 

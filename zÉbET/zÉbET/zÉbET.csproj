@@ -58,6 +58,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ZEBET_verFinal\Main\DESPORTOS\Deposita.aspx" />
     <Content Include="ZEBET_verFinal\Main\DESPORTOS\Apostas.aspx" />
     <Content Include="ZEBET_verFinal\Main\DESPORTOS\baseball.aspx" />
     <Content Include="ZEBET_verFinal\Main\DESPORTOS\Basket.aspx" />
@@ -205,6 +206,12 @@
     <Content Include="ZEBET_verFinal\Main\wallpaperfut.png" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ZEBET_verFinal\Main\DESPORTOS\Deposita.aspx.cs">
+      <DependentUpon>Deposita.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZEBET_verFinal\Main\DESPORTOS\Deposita.aspx.designer.cs">
+      <DependentUpon>Deposita.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ZEBET_verFinal\Main\DESPORTOS\Apostas.aspx.cs">
       <DependentUpon>Apostas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

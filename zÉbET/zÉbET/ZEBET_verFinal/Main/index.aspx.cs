@@ -81,6 +81,9 @@ namespace zÉbET
                         XmlAttribute saldo = doc.CreateAttribute("saldo");
                         saldo.InnerXml = "0";
 
+                        XmlNode apostas = doc.CreateElement("apostas");
+
+                        user.AppendChild(apostas);
                         user.Attributes.Append(name);
                         user.Attributes.Append(pass);
                         user.Attributes.Append(nivel);
