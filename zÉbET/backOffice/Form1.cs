@@ -61,6 +61,9 @@ namespace ZeBet_BackOffice
                     user.Attributes.Append(nivel);
                     user.Attributes.Append(saldo);
 
+                    XmlNode apostas = doc.CreateElement("apostas");
+                    user.AppendChild(apostas);
+
                     Users.AppendChild(user);
 
                     doc.Save("..\\..\\..\\data.xml");

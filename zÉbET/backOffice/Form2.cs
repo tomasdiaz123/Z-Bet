@@ -18,7 +18,7 @@ namespace backOffice
         public Form2()
         {
             InitializeComponent();
-            
+
         }
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
@@ -32,7 +32,7 @@ namespace backOffice
             cbbNivel.Text = "user";
             ListViewItem lvi;
             ListViewItem.ListViewSubItem lvsi;
-            
+
             // preencher listview dos users
             foreach (XmlNode node in doc.DocumentElement.SelectSingleNode("Users"))
             {
@@ -59,7 +59,7 @@ namespace backOffice
 
             foreach (XmlNode node in doc.DocumentElement.SelectSingleNode("jogos"))
             {
-                
+
                 int idJogo = Convert.ToInt32(node.Attributes[0].Value);
                 string modalidade = node.Attributes[1].Value;
                 string liga = node.Attributes[2].Value;
@@ -96,7 +96,7 @@ namespace backOffice
             }
         }
 
-      
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             doc.Save("..\\..\\..\\data.xml");
@@ -104,7 +104,7 @@ namespace backOffice
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            if (lsvUsers.SelectedItems.Count > 0)
+            if (lsvUsers.SelectedItems.Count > 0) //editar utilizador
             {
                 lsvUsers.SelectedItems[0].Text = txtUserName.Text;
                 lsvUsers.SelectedItems[0].SubItems[1].Text = cbbNivel.Text;
@@ -115,7 +115,7 @@ namespace backOffice
                 doc.DocumentElement.SelectSingleNode("Users").ChildNodes[lsvUsers.SelectedIndices[0]].Attributes[2].Value = cbbNivel.Text;
                 doc.DocumentElement.SelectSingleNode("Users").ChildNodes[lsvUsers.SelectedIndices[0]].Attributes[3].Value = numSaldo.Value.ToString();
             }
-            else
+            else //criar utilizador
             {
                 ListViewItem lvi;
                 ListViewItem.ListViewSubItem lvsi;
@@ -138,7 +138,8 @@ namespace backOffice
                 user.Attributes.Append(pass);
                 user.Attributes.Append(nivel);
                 user.Attributes.Append(saldo);
-
+                XmlNode apostas = doc.CreateElement("apostas");
+                user.AppendChild(apostas);
                 Users.AppendChild(user);
 
                 lvi = new ListViewItem();
@@ -187,10 +188,10 @@ namespace backOffice
         {
 
             int id = lsvJogos.Items.Count;
-           
+
             FormAddJogo formAddGame = new FormAddJogo(id);
 
-            
+
 
             if (formAddGame.ShowDialog() == DialogResult.OK)
             {
@@ -199,7 +200,7 @@ namespace backOffice
             }
         }
 
-        private void xmlAddJogo (Jogo jogo)
+        private void xmlAddJogo(Jogo jogo)
         {
             //id="1" modalidade="Futebol" liga="pt" team1="maritimo" team2="nacional" closed="0" res="tbd"
             XmlNode Users = doc.SelectSingleNode("ZEBET").SelectSingleNode("jogos");
@@ -246,7 +247,7 @@ namespace backOffice
             }
             Users.AppendChild(user);
         }
-        private void lsvAddJogo (Jogo jogo)
+        private void lsvAddJogo(Jogo jogo)
         {
             //id    modalidade  liga    equipa1 odd1 oddX odd2 equipa2
             ListViewItem lvi = new ListViewItem();
@@ -294,7 +295,7 @@ namespace backOffice
 
         private void lsvJogos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lsvJogos.SelectedIndices.Count!=0)
+            if (lsvJogos.SelectedIndices.Count != 0)
             {
                 numOdd1.Enabled = true;
                 numOddX.Enabled = true;
@@ -322,6 +323,7 @@ namespace backOffice
         {
             if (lsvJogos.SelectedIndices.Count != 0)
             {
+
                 lsvJogos.SelectedItems[0].Tag = "10";
                 btnCloseBets.Enabled = false;
             }
@@ -344,16 +346,50 @@ namespace backOffice
                     MessageBox.Show(msg, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-            }
-            if (lsvJogos.SelectedIndices.Count != 0 && btnCloseBets.Enabled == false )
-            {
-                Resultado formResult = new Resultado(txtTeam1.Text,txtTeam2.Text);
-
-                if (formResult.ShowDialog() == DialogResult.OK)
+                if (btnCloseBets.Enabled == false)
                 {
-                    lsvJogos.SelectedItems[0].Tag = "1" + formResult.Value;
+                    Resultado formResult = new Resultado(txtTeam1.Text, txtTeam2.Text);
+
+
+                    if (formResult.ShowDialog() == DialogResult.OK)
+                    {
+                        decimal odd = 1;
+                        switch (formResult.Value)
+                        {
+                            case '1':
+                                odd = numOdd1.Value;
+                                break;
+                            case '2':
+                                odd = numOdd2.Value;
+                                break;
+                            case 'X':
+                                odd = numOddX.Value;
+                                break;
+                        }
+                        //xml
+                        lsvJogos.SelectedItems[0].Tag = "1" + formResult.Value;
+                        foreach (XmlNode user in doc.DocumentElement.SelectSingleNode("Users"))
+                        {
+                            double saldo = Convert.ToDouble(user.Attributes[3].Value);
+                           
+                            foreach (XmlNode jogo in user.SelectSingleNode("apostas").ChildNodes)
+                            {
+                                if (jogo.Attributes[0].Value == lsvJogos.SelectedItems[0].Text)
+                                    foreach (XmlNode aposta in jogo)
+                                    {
+                                        if (aposta.Attributes[0].Value == formResult.Value.ToString())
+                                        {
+                                            saldo += Convert.ToDouble(aposta.Attributes[1].Value) * Convert.ToDouble(odd);
+                                            break;
+                                        }
+                                    }
+                            }
+                            user.Attributes[3].Value = saldo.ToString();
+                        }
+                    }
                 }
             }
+
         }
 
         private void btnSend2_Click(object sender, EventArgs e)
@@ -363,6 +399,10 @@ namespace backOffice
                 lsvJogos.SelectedItems[0].SubItems[4].Text = numOdd1.Value.ToString();
                 lsvJogos.SelectedItems[0].SubItems[5].Text = numOddX.Value.ToString();
                 lsvJogos.SelectedItems[0].SubItems[6].Text = numOdd2.Value.ToString();
+
+                doc.DocumentElement.SelectSingleNode("jogos").ChildNodes[lsvJogos.SelectedIndices[0]].ChildNodes[0].Attributes[0].Value = numOdd1.Value.ToString();
+                doc.DocumentElement.SelectSingleNode("jogos").ChildNodes[lsvJogos.SelectedIndices[0]].ChildNodes[1].Attributes[0].Value = numOddX.Value.ToString();
+                doc.DocumentElement.SelectSingleNode("jogos").ChildNodes[lsvJogos.SelectedIndices[0]].ChildNodes[2].Attributes[0].Value = numOdd2.Value.ToString();
             }
         }
 
