@@ -312,6 +312,7 @@
             this.btnSave2.TabIndex = 7;
             this.btnSave2.Text = "Guardar";
             this.btnSave2.UseVisualStyleBackColor = true;
+            this.btnSave2.Click += new System.EventHandler(this.btnSave2_Click);
             // 
             // btnSend2
             // 

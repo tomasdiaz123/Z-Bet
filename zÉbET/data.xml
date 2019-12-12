@@ -21,6 +21,7 @@
     <user name="hey" pass="Aaa^^123" nivel="user" saldo="0" />
     <user name="hey2" pass="alA^^123" nivel="user" saldo="0" />
     <user name="nunes" pass="A#berto123" nivel="user" saldo="0" />
+    <user name="henriqueomaricas" pass="maricas" nivel="user" saldo="1" />
   </Users>
   <jogos>
     <jogo id="0" modalidade="Futebol" liga="pt" team1="benfica" team2="porto" closed="0" res="tbd">
@@ -32,6 +33,11 @@
       <odd value="4" />
       <odd value="1,5" />
       <odd value="1,5" />
+    </jogo>
+    <jogo id="2" modalidade="Futebol" liga="ikfdsf" team1="sadsadsa" team2="wadsadw" closed="0" res="tbd">
+      <odd value="1,01" />
+      <odd value="1,01" />
+      <odd value="1,01" />
     </jogo>
   </jogos>
 </ZEBET>

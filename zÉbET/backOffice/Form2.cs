@@ -195,9 +195,57 @@ namespace backOffice
             if (formAddGame.ShowDialog() == DialogResult.OK)
             {
                 lsvAddJogo(formAddGame.jogo);
+                xmlAddJogo(formAddGame.jogo);
             }
         }
 
+        private void xmlAddJogo (Jogo jogo)
+        {
+            //id="1" modalidade="Futebol" liga="pt" team1="maritimo" team2="nacional" closed="0" res="tbd"
+            XmlNode Users = doc.SelectSingleNode("ZEBET").SelectSingleNode("jogos");
+            XmlNode user = doc.CreateElement("jogo");
+
+            XmlAttribute id = doc.CreateAttribute("id");
+            id.InnerXml = jogo.idJogo.ToString();
+
+            XmlAttribute modalidade = doc.CreateAttribute("modalidade");
+            modalidade.InnerXml = jogo.modalidade;
+
+            XmlAttribute liga = doc.CreateAttribute("liga");
+            liga.InnerXml = jogo.liga;
+
+            XmlAttribute team1 = doc.CreateAttribute("team1");
+            team1.InnerXml = jogo.team1;
+
+            XmlAttribute team2 = doc.CreateAttribute("team2");
+            team2.InnerXml = jogo.team2;
+
+            XmlAttribute closed = doc.CreateAttribute("closed");
+            closed.InnerXml = "0";
+
+            XmlAttribute result = doc.CreateAttribute("res");
+            result.InnerXml = "tbd";
+
+            user.Attributes.Append(id);
+            user.Attributes.Append(modalidade);
+            user.Attributes.Append(liga);
+            user.Attributes.Append(team1);
+            user.Attributes.Append(team2);
+            user.Attributes.Append(closed);
+            user.Attributes.Append(result);
+
+            for (int idx = 0; idx < 3; idx++)
+            {
+                XmlNode odd = doc.CreateElement("odd");
+                XmlAttribute value = doc.CreateAttribute("value");
+
+                value.InnerXml = jogo.odds[idx].ToString();
+                odd.Attributes.Append(value);
+
+                user.AppendChild(odd);
+            }
+            Users.AppendChild(user);
+        }
         private void lsvAddJogo (Jogo jogo)
         {
             //id    modalidade  liga    equipa1 odd1 oddX odd2 equipa2
@@ -280,19 +328,22 @@ namespace backOffice
         }
         private void btnResult_Click(object sender, EventArgs e)
         {
-            string res = lsvJogos.SelectedItems[0].Tag.ToString().Substring(1, 1);
-            if (res != "0")
+            if (lsvJogos.SelectedIndices.Count != 0)
             {
-                string msg = "";
-                if (res == "1")
-                    msg = "Vitoria do " + txtTeam1.Text;
-                if (res == "X")
-                    msg = "Empate";
-                if (res == "2")
-                    msg = "Vitoria do " + txtTeam2.Text;
+                string res = lsvJogos.SelectedItems[0].Tag.ToString().Substring(1, 1);
+                if (res != "0")
+                {
+                    string msg = "";
+                    if (res == "1")
+                        msg = "Vitoria do " + txtTeam1.Text;
+                    if (res == "X")
+                        msg = "Empate";
+                    if (res == "2")
+                        msg = "Vitoria do " + txtTeam2.Text;
 
-                MessageBox.Show(msg, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                    MessageBox.Show(msg, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
             }
             if (lsvJogos.SelectedIndices.Count != 0 && btnCloseBets.Enabled == false )
             {
@@ -315,6 +366,9 @@ namespace backOffice
             }
         }
 
-       
+        private void btnSave2_Click(object sender, EventArgs e)
+        {
+            doc.Save("..\\..\\..\\data.xml");
+        }
     }
 }
